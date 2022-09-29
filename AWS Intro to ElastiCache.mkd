@@ -1,0 +1,62 @@
+We explored Memcached, We explored Redis
+ 
+ 
+We installed Memcached and Redis
+
+
+We connected to it and ran some commands
+ 
+### There is more to do
+* What about authentication ?
+* Server hardening ?
+* Patch updates ?
+* What happens if server goes down ? Who will setup clustering and HA ?
+
+
+ElastiCache is a fully managed AWS service which makes it easier to deploy, operate and scale an in-memory data-store or cache in cloud
+ 
+ 
+It is like a managed service and within few clicks we can have in-memory layer in our infra
+ 
+ 
+ElastiCache also detects and replaces failed nodes thus reducing the overhead
+
+
+## Params
+cluster engine = Redis or Memcached
+
+## Memcached settings
+* Name 
+* Engine version compatibility 
+* Port 
+* Parameter group 
+* Node Type 
+* Number of nodes 
+
+### Advanced Memcached settings
+* Subnet group 
+* Preferred Availability Zones 
+* Security groups 
+
+### Maintenance 
+* Maintenance window 
+* Topic for SNS notification 
+
+## Redis Settings 
+* Name 
+* Description 
+* Engine version compatibility 
+* Port 
+* Parameter group 
+* Node Type 
+* Number of replicas 
+
+### Advanced Redis settings
+* Multi-AZ with Auto-failover 
+* Subnet group 
+* Preferred Availability Zones 
+
+### Security
+* Import Data to Cluster 
+* Backup 
+* Maintenance 
