@@ -1,0 +1,30 @@
+## Instance Types
+Instance Types basically describes the “hardware component” on which the EC2 instance will be running on
+ 
+These hardware components can be:
+* CPU
+* RAM
+* Graphics Card
+* Storage
+
+
+| <b><u>Type</u></b> | <b><u>Family</u></b> | <b><u>Use Cases</u></b> |
+| :---         | :---         | :---         |
+| :small_orange_diamond: [t2] | General purpose | Dev environment|
+| :small_orange_diamond: [M3,M4] | General purpose | Application servers|
+| :small_orange_diamond: [C3,C4 series] | Compute Optimized| CPU Intensive Apps/DBs|
+| :small_orange_diamond: [D3] | Storage Optimized | File Servers, Data Warehousing, Hadoop|
+| :small_orange_diamond: [i2] | Storage Optimized | High Speed Storage (data warehouse, DB)|
+| :small_orange_diamond: [G2] | Graphic Optimized  | Video Encoding, 3D rendering|
+| :small_orange_diamond: [R3, R4] | Memory Optimized  | Memory Intensive applications|
+| :small_orange_diamond: [X1] | Memory Optimized  |  Super Memory Intensive applications|
+
+
+## Easy way to remember
+* C for Compute
+* D for Density
+* G for Graphics
+* I for IOPS
+* M for Main choice for General-purpose
+* R for RAM
+* T for Cheap General Purpose
