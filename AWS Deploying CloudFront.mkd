@@ -1,0 +1,5 @@
+## Steps Involved
+* Create a server with sample HTML website
+* Create CloudFront Distribution
+* Load the website from CloudFront
+* Explore various features of CloudFront
