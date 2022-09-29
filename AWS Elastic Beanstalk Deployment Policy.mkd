@@ -1,0 +1,26 @@
+## Elastic Beanstalk supports several options for deployments
+* All at Once
+* Rolling
+* Rolling with Additional Batch
+* Immutable
+
+## All at Once
+* Deploys new version to all the instances simultaneously
+* All of he instances are out of service while deployment is in process
+* If updates fails then you will need to roll back changes by re-deploying the previous working version
+
+## Rolling Deployment Policy
+* Deploys the newer version in batches
+* Each batch of instances is taken out of service while deployment is taking place
+* The overall capacity (in terms of servers) will be reduces while the deployment is happening
+* Not recommended for performance critical applications
+ 
+## Rolling with Additional Batch
+* Launches additional batch of instances
+* This maintains full capacity during deployments
+
+## Immutable Deployment Policy
+* Deploys newer version of the application in a completely new servers under new auto-scaling group
+* When new instances passes their health-check, they are moved to older auto-scaling group and older ones are terminated
+* Impact of failed update is less as all we need to do is delete the new auto-scaling group and EC2
+* Preferred option for mission critical production systems
