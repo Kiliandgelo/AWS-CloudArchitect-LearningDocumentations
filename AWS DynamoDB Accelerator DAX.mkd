@@ -1,0 +1,19 @@
+DAX is a fully managed, clustered, in-memory cache for DynamoDB
+It delivers up to 10x read performance improvement
+Ideal for read-heavy bursty workload types
+
+ 
+      Params = Cluster name, Node Type, Cluster size, Encryption, IAM role, Subnet group, SG
+      
+ 
+Where it is not suitable for ?
+* Not suitable for workloads where strong consistent reads are required 
+* Write Intensive Applications 
+* Application that do not perform many read operations 
+* Application that do not require microsecond response time 
+
+## Important Pointers
+It is an in-memory caching solution for DynamoDB
+It improves response time for eventual consistent reads workloads
+We need to have the client and point it to the DAX table instead of DynamoDB
+Not suitable for write intensive workloads
