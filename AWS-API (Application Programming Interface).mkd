@@ -1,0 +1,43 @@
+* API stands for application programming interface
+* It is generally used for inter-communication between multiple software
+* With the API, the exact structure of request and response is documented upfront and is likely to remain same throughout the time
+ 
+### Use Case
+Weather Application:
+James wants to build a weather report application. 
+Since it needs weather report for all countries, he wonders where he can get all the data from.
+OpenWeatherMap has all this data and thus James decides to integrate his application fetch data from OpenWeatherMap Database
+ 
+Now question is, how will he parse all this data ? 
+ 
+### Use Case
+Infrastructure Overview:
+You want to have list of all instances in cloud environment, along with their names, IP addresses, OS, Kernel version region, backup windows and available snapshots
+ 
+How will we go ahead with the use case ?
+
+## API - How it works ?
+
+* GUI – Graphical User Interface
+* API – Application User Interface
+* API is basically a user interface, with just different users in mind
+* This interface allows one application to communicate with second application though simple commands
+
+Common API Methods:
+* GET:           It allows us to get some information
+* POST:        It is used to create some new information
+* PUT:          It is used to update and replace any existing resource
+* DELETE:    It is used to remove a resource
+ 
+
+### Yet another Use Case
+Online Anti-Virus Software
+You have an anti-virus software running in a server.
+You want other users over the internet to upload their files and get the file scanned by the AV
+ 
+How will we go ahead with the use case ?
+ 
+Two things needed 
+There are 2 important components that are needed:
+* Function
+* API
