@@ -1,0 +1,23 @@
+## Getting the basics right
+There are 3 important aspects we need to understand for API Gateway for the certification exams
+* API Gateway Throttling
+* API Gateway Caching
+* API Gateway Validation
+
+## API Gateway Throttling
+To prevent your API to be overwhelmed by a huge number of requests, Amazon API gateway service throttles the requests made to the API
+ 
+By default, API Gateway has a limit of steady-state request rate of 10.000 requests per second
+The burst limit is 5000 request per second across all API’s within AWS Account
+ 
+* If a caller submits 10.000 requests in a one second period evenly (for example, 10 requests every millisecond) API Gateway processes all requests without dropping any
+* If the caller sends 10.000 requests in the first millisecond, API Gateway servers 5000 of those requests and throttles (HTTP 429) the rest in the one-second period
+
+## API Gateway Caching
+If the same type of requests is being made multiple times, API Gateway supports caching mechanism to cache the endpoint’s response
+ 
+Thus, with caching, we can reduce the number of call made to be the backend endponts and also improve the overall latency for an API
+ 
+## API Gateway Validation
+We can configure API Gateway to perform the necessary validation for an API request
+If the validation of the request fails, API Gateway immediately drops the requests and returns the HTTP 400 response code to the requester 
