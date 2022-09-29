@@ -1,0 +1,13 @@
+## Understanding the Basics
+There are 2 ways in which you can build your infrastructure:
+* Manually creating the infrastructure 
+* Through Automation 
+
+
+One of the major benefits of automation is the code usability
+
+## Benefits of Infrastructure as Code
+There are several benefits of designing your infrastructure as code:
+* Reusable Code
+* Managing infrastructure via source control
+* Enable collaboration
