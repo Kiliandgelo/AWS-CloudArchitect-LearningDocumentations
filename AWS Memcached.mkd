@@ -1,0 +1,44 @@
+Memcached is general-purpose distributed memory caching system
+
+
+It is often used to speed up dynamic database-driven websites by caching data and objects in RAM
+
+ 
+Memcached One of the major benefits of Memcached is that it is in-memory
+
+
+When data is retrieved from SSD or when data is retrieved from in-memory cache, there is great amount of performance difference
+ 
+ 
+* Hard Drive
+* SSD
+* RAM disk
+
+## Integrating with application
+Try and fetch the data from the memcached
+* If not found, fetch the data from the database through a query 
+* Store that Data in the memcached 
+ 
+```java
+function_get_foo(int userid)
+    /”first try the cache”/
+    data = memcached_fetch(“userrow:” + userid)
+    id not data
+        /*not found: request database*/
+        data = db_select(“SELECT ” FROM users WHERE userid=?”, userid)
+        /*then store in cache until next get*/
+        memcached_add(“userrow:” + userid, data)
+    return data 
+```
+
+
+
+        memcached start 
+        memcached status 
+
+## Important Pointers
+Memcached is a simple volatile cache server
+* It allows us to store simple key-value pair when value can be string up to 1MB
+* It is in-memory caching solution, if the server is restarted then all data is lost
+* Memcached is multi-threaded
+* Memcached is quite easy to scale and scales horizontally
