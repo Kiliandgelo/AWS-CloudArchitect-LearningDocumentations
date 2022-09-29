@@ -1,0 +1,12 @@
+You can create an Amazon CloudWatch alarm that monitors an Amazon EC2 instance and automatically recovers the instance if it becomes impaired due to an underlying hardware failure or a problem that requires AWS involvement to repair
+
+### Examples of problems that cause system status checks to fail include:
+* Loss of network connectivity
+* Loss of system power
+* Software issues on the physical host
+* Hardware issues on the physical host that impact network reachability 
+
+### Instance -> Status Checks -> Create alarm
+
+
+      aws cloudwatch set-alarm-state –alarm-name “demo” –state-value ALARM –state-reason “The testing alarm” –region us-east-1
