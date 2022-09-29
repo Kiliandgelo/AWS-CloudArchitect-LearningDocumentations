@@ -1,0 +1,39 @@
+## Getting started
+Lambda@Edge lets you run Lambda functions to customize content that CloudFront delivers
+ 
+ 
+You can use Lambda functions to change CloudFront requests and responses at the following points:
+ 
+1. After CloudFront receives a request from a viewer (viewer request)
+2. Before CloudFront forwards the request to the origin (origin request)
+3. After CloudFront recieves the response from the origin (origin response)
+4. Before CloudFront forwards the response to the viewer (viewer response)
+ 
+## Viewer Request
+Viewer Request is executed on every request before CloudFront cache is checked
+
+
+There are various things that we can do at this stage, like:
+* Modify URLs, cookies query strings, etc..
+* Perform Authentication and Authorization Checks
+
+## Origin Request
+Executed on cache miss, before a request is forwarded to the origin
+
+
+There are various things that we can do at this stage, like:
+* Dynamically select origin based on the request headers
+
+## Origin Response
+Executed on a cache miss, after a response is received from the origin
+
+
+There are various things that we can do at this stage, like:
+* Modify the response headers
+* Intercept and replace various 4XX and 5XX errors from the origin
+ 
+## Viewer Response
+Executed on all the responses received either from the origin or the cache
+
+
+Modifies the response headers before caching the response
