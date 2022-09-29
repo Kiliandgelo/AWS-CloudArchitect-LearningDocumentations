@@ -1,0 +1,24 @@
+## Code commit
+### Overview of AWS CodeCommit
+Aws CodeCommit is a managed source control service provided by AWS for hosting GIT repos
+
+      yum whatprovides git
+      
+## Code Deploy
+CodeBuild -> S3 -> CodeDeploy -> S3
+ 
+### CodeDeploy Configuration
+There are certain steps needed for CodeDeploy to be configured
+* Create an IAM role with permission for S3 and EC2
+* Install CodeDeploy Agent
+* Configure CodeDeploy Applications
+
+## Code Pipeline
+### Overview of Code Pipeline
+AWS CodePipeline is a continuous delivery service to automate steps required to release the software
+
+It allows us to launch entire continuous delivery toolchain in minutes, allowing releasing code faster
+
+* AWS Codepipeline automatically triggers your pipeline whenever there is a commit in the source repository providing outpu artifact from source stage
+* Output artifact is ingested into input artifact to the Build stage
+* Output artifact from Build stage acts as input to the Deploy stage
