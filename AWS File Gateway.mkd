@@ -1,0 +1,66 @@
+## Overview of File Gateway
+AWS Storage Gateway’s file interface, or file gateway provides an interface via NFS, SMB for synchronization of data from on-premise to S3 bucket
+
+## Performance Metrics in Storage Device
+* Storage Device is a piece of equipment on which information can be stored
+* Common disk performance metrics are:
+
+Input/Output operations per seconds (IOPS)
+
+
+Throughput (MB/s or MiB/s)
+
+
+Response time (ms)
+        
+## EBS Volume Types
+EBS provides different volumes types which differs in performance and price
+* This gives flexibility for user to design and implement optimal EBS solution
+ 
+## General Purpose SSD
+* Used for general purpose workloads which balances the price and performance for normal workloads
+* Typically used for test, dev, and prod environment for normal workloads
+* Volume size from 1GiB to 16TiB
+* Performance: Max 10.000 IOPS, 160 MiB/sec throughput
+* Referred by gp2
+
+## Provisioned IOPS SSD
+* Highest performance SSD volume designed for mission critical application workloads
+* Typically used for large database workloads like MongoDB, cassandra, PostgreSQL, MySQL, etc..
+* Volume size from 4GiB to 16TiB
+* Performance: Max 20.000 IOPS, 320 MiB/sec
+* Referred by io1
+
+## Throughput Optimized HDD
+* Low Cost HDD designed for frequently accessed throughput intensive workload
+* Used for applications like Data Warehouse, Big Data, Log processing etc…
+* Volume size from 500GiB to 16TiB
+* Performance: Max 500 IOPS, 500MiB/sec
+* Referred by st1
+
+## Cold HDD
+* Lowest Cost HDD designed for less frequently access workloads
+* Used in scenarios were lowest storage cost is important
+* Volume size from 500GiB to 16TiB
+* Performance: Max 250 IOPS, 250MiB/sec
+* Referred by sc1
+
+## Magnetic (Previous Generation)
+* Volume type = EBS Magnetic
+* Use Case = Workloads where data is infrequently accessed
+* Volume Size = 1GiB to 1TiB
+* Max Performance = Performance: Max 40 – 200 IOPS, 40-90MiB/s
+ 
+## Sample scenario
+Medium Corp is an E-Commerce organization and you have been assigned responsable related to performance optimization of servers. 
+
+
+They have a critical database server which receives lot of connections and they tried increasing RAM and CPU but still it is slow. What type of EBS volume type will you suggest ?
+* General Purpose SSD
+* Throughput Optimized
+* Provisioned IOPS
+* Cold HDD
+
+
+
+https://aws.amazon.com/ebs/pricing/
