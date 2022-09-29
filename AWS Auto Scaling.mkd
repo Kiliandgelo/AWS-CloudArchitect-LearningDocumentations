@@ -1,0 +1,40 @@
+Auto Scaling allows up to scale up and down the EC2 instance depending on conditions that is being defined by the solutions architect
+
+### Use Case
+* Medium Corp is an E-commerce organization in India and is hosted completely on AWS. In the past 6 months, the AWS bills have skyrocketed and CEO has asked you to reconsider your design so that is not only supports operations but also does it in cost effective way
+* Since it is E-Commerce company targeting Indian consumers, the traffic patterns drastically during daytime and nighttime
+
+### How to Achieve ?
+Can be achieved depending on the average load of the instance
+ 
+### Simple Scaling Policy
+Base instance level: 2 years
+ 
+### Scalable
+      If average CPU utilization > 70%       ; add 2 more instance
+      If average CPU utilization < 25%       ; remove 2 more instance
+ 
+### Understanding Scalability
+* Auto Scaling helps in achieving horizontal scalability of EC2 instances depending on the condition defined by the user
+* To achieve the use case of Medium Corp, we can scale based on CPU utilization
+* Nigh Time -> Less Traffic -> Low CPU Utilization -> Servers Scaled Down
+* Day Time -> High Traffic -> High CPU Utilization -> Servers Scaled Up
+
+### Components of Auto Scaling
+Auto Scaling has 2 important components:
+* Launch Configuration
+* Auto Scaling Groups
+
+Launch Configuration (What)
+* Name
+* AMI
+* Instance Type
+* Security Groups
+* IAM Role
+* Etc…
+
+Auto Scaling Groups (Where)
+* Minimum and Maximum capacity
+* VPC and Subnets
+* Load Balancer
+* Health Checks
