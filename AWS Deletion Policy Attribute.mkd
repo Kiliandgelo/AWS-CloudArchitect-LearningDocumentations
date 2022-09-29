@@ -1,0 +1,24 @@
+## CloudFormation
+In CloudFormation, when we delete the stack, all the resources created through that stack will be deleted
+In certain case, we want that certain resources should not be deleted OR snapshots must be taken before resources are terminated
+This is controlled with help of “Deletion Policy Attribute” in cloudformation
+
+## Introduction
+Deletion policy attribute is allows us to preserve or (in some case) backup a resource when it’s stack is deleted
+We must specify deletion policy attribute for each resource that we want to control
+If no suck attribute is defined, cloudformation deletes the resources by default
+
+```yaml
+
+“AWSTemplateFormatVersion”:”2010-09-09″
+“Resources”:{
+   “myS3Bucket”:{
+      “Type”:”AWS::S3::Bucket”
+      “DeletionPolicy”:”Retain”
+
+```
+
+## Deletion Policy
+There are 2 options when we use deletion policy attributes
+1- Retain: CloudFormation keeps the resource without deleting it 
+2- Snapshots: CloudFormation creates snapshots of the resource before deleting it
