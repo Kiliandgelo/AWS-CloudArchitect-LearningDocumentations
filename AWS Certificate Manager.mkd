@@ -1,0 +1,2 @@
+### Earlier Approach
+I have a website and I need to use HTTPS. There are 2 ways, self-signed certificate and the CA signed certificate
