@@ -1,0 +1,15 @@
+## Challenges
+* Internet is a good option if amount of traffic is within a certain limit
+* There are always latencies which can also be involved
+* Many of the organization have hybrid architecture: Datacenter + AWS
+* In such cases, latency can cause major challenges for the application
+
+## Introducing DX
+* In order to solve this challenge, AWS introduced Direct Connect
+* AWS Direct Connect let’s customer establish a dedicated direct network connection between the client’s network and one of the direct connect locations
+
+## Benefits of DX
+Having direct connection between customer’s datacenter to AWS, brings tremendous amount of benefits, some of them includes:
+1. Consistent Network Performance
+2. Reduces our bandwidth costs
+3. Private connectivity to our AWS VPC
