@@ -1,0 +1,17 @@
+### Decision Making Process
+* Decision starts with assumption that the request will be denied
+* Then, all the attached policies are evaluated
+* Code will look if there is any explicit deny in the policy
+* If explicit deny is not found, code will look for allowed instruction and if yes then decision is allowed 
+* If no allow is found, decision = deny
+
+### Scenario
+4 AWS S3 buckets are available
+
+
+We want to give access to all the buckets in our S3, except 1 
+
+### Step1
+* Allow access to all the buckets in S3
+### Step2
+* Deny access to bucket 04
