@@ -1,0 +1,40 @@
+## Understanding RAID
+Lets take a scenario
+* We have 2 hard disk drives , each with a speed of 100MB/second 
+* There is a new requirement, new application needs HDD with speed of 200MB/second 
+* What to do ? 
+
+ 
+Power of 2 HDD
+* If we can combine 2 HDD somehow, we can achieve speed of 200MB/second 
+
+## RAID stands for Redundant Array Inexpensive Disks
+It is a data storage technology that combines multiple physical storage device into a single logical device for purpose of data redundancy, performance or both
+ 
+There are various different RAID configuration available
+* RAID 0 – Striping
+* RAID 1 – Data Mirroring
+* RAID 5 – Striping with Parity
+
+## Understanding RAID 0
+* In RAID 0, data is striped across multiple disks
+* Minimum 2 disks are required
+* Excellent performance , as blocks are stripped
+* Avoid using it for critical systems
+ 
+## Understanding RAID 1
+
+* In RAID 1, data is mirrored across multiple disks
+* Minimum 2 disks are required 
+* Excellent redundancy (as blocks are mirrored)
+
+## When to use which ? 
+
+* RAID 0    -> Use when I/O performance is more important than fault
+ 
+* RAID 1   -> Use when Fault Tolerance is more important than the I/O
+ 
+### Important Pointers 
+We have 2x 500GiB EBS Volumes with provisioned IOPS of 4000 each
+* RAID 0 – 1000Gib in total with 8000 IOPS
+* RAID 1 – 500Gib with 4000 IOPS
