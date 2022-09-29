@@ -1,0 +1,16 @@
+## Overview of DX Gateway
+* Direct Connect Gateway can be used to connect your direct connect connection over private VIF to one or more VPC’s within the account that are located in same or multiple regions
+ 
+* It allows us to combine private VIF’s with multiple VGW’s in local or remote region 
+ 
+* Direct Connect Gateway is available globally and is not region specific resource 
+ 
+### Let’s taken an example:
+If your DX connection is in us-east-1 region, by using the Direct Connect Gateway, you can connect to VPC’s in your account in all other regions (except China)
+
+## Considerations for DX Gateway
+You cannot use a Direct Connect gateway that’s in your account connect to a VPC that’s in a different AWS account
+
+The VPCs to which you connect though a Direct Connect Gateway cannot have overlapping CIDR blocks
+
+You cannot use a Direct Connect Gateway to connect to a VPC in the China Regions
