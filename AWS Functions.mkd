@@ -1,0 +1,16 @@
+CloudFormation provides several build-in functions that basically helps us while managing our stacks when we deploy them 
+
+### Some of the functions are:
+* Fn::FindInMap
+* Fn::GetAtt
+* Fn::GetAZs
+* Fn::Base64
+* Fn:Join
+ 
+ 
+## Fn::GetAtt
+Fn::GetAtt basically returns a value of an attribute from a resource in a template
+It is basically used to output data after a resource is created
+
+### Sample:
+Fn::GetAtt    :     [“myELB”, “DNSName”]
