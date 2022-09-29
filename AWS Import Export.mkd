@@ -1,0 +1,10 @@
+AWS Import / Export allows us to import or export large amounts of data between and portable storage devices
+
+### Functionalities that are provided:
+* Import to S3
+* Export from S3
+* Import to AWS EBS
+
+### Steps Involved
+Download the Import/Export tool -> Save your credentials to a file -> Create import job
+-> Create export job
