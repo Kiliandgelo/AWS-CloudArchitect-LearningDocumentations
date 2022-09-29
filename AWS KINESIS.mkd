@@ -1,0 +1,79 @@
+## AWS Streaming Data KINESIS
+Streaming Data across implies that instead of reading data as packets or chunks, data is read continuously with constant bitrate 
+ 
+ 
+Application starts reading data from start of a file and continues reading it in a sequence manner without any random seeks
+ 
+ 
+### 3 entities
+There are  3 entities in this kind of use case:
+
+
+Producer , Stream Store, Consumer
+
+## Overview of AWS Kinesis
+AWS Kinesis is a set of services which makes it easy to work with set of streaming data on AWS 
+ 
+* Kinesis Data Stream -> Captures, processes and stores data streams in real-time
+* Kinesis Data Firehose -> Allows to capture and deliver data to data store in realtime. Primary to move data from point A to point B
+* Kinesis Data Analytics -> Analyze streaming data in real-time with SQL/Java code
+* Kinesis Video Stream -> Capture, processes and stores videos
+ 
+## Kinesis Data Stream
+ 
+It allows us to capture, process and store data streams
+
+
+Input -> Kinesis Data Streams -> processing tools (Kinesis Data Analytics, Spark on EMR, Custom code on EC2, Lambda) -> Output
+ 
+ 
+Create Kinesis Data Stream -> Number of shards -> Total Stream capacity
+ 
+## AWS Kinesis
+ 
+AWS Kinesis is a managed platform that allows us to load and analyze streaming data in real time basis.
+
+
+There are 3 major type of features available:
+* AWS Kinesis Streams -> Collect and Process large stream of data in real time
+* Kinesis Firehose -> To deliver streaming data to destination like S3, RedShift
+* Kinesis Analytics -> To process & analyze streaming data with standard SQL
+ 
+Kinesis list streams 
+          
+          
+            aws kinesis list-streams
+ 
+Put Record in Kinesis
+
+
+            aws kinesis put-record –stream-name kplabs-stream –partition-key 123 –data “Hello”
+            aws kinesis put-record –stream-name kplabs-test –partition-key 123 –data “Hello 2 fois”
+ 
+Getting the shard iterator 
+
+
+            aws kinesis get-shard-iterator –shard-id shardId-0000000000 –shard-iterator-type TRIM_HORIZON –stream-name kplabs-demo
+ 
+Fetch Records with Shard iterator
+
+
+            aws kinesis get-records –shard-iterator —
+ 
+ 
+## AWS Kinesis Data Firehose
+Loads data streams into AWS Data Stores
+Kinesis Firehose is primarily about delivery from point A to point B 
+ 
+Can do some amount of processing like changing format, run Lambda compress data and others
+ 
+ 
+            aws firehose list-delivery-streams –region us-west-1
+            aws firehose put-record –delivery-stream-name kplabs-firehose –record-‘Data”{\”attribute\”:1}”” –region us-west-1
+ 
+## Kinesis Data Analytics
+Kinesis Data Analytics has ability to analyze data streams in real time
+Supports 2 languages for analytics, SQL and Java
+ 
+## Kinesis Video Stream
+Amazon Kinesis Video Stream makes it easy to securely stream video from connected devices to AWS
