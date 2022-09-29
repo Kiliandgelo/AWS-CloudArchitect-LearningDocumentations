@@ -1,0 +1,5 @@
+* IDS = Intrusion Detection System
+* IPS = Intrusion Prevention System
+
+
+You have a IDS/IPS agents installed in the EC2 instance which will communicate to the central IDS/IPS appliance
