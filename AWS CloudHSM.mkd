@@ -1,0 +1,19 @@
+### Basics of HSM
+* HSM stands for Hardware Security Module
+* They are special devices which safeguards and manages digital keys for strong authentication
+* These devices are tamper resistant, that means if anyone tries to tamper, they will automatically delete the keys stored
+
+CloudHSM is AWS offering of using a dedicated HSM withing your AWS Cloud
+ 
+Prior to this, company’s had to store HSM on-premise and if infrastructure was on AWS, there were lot of latency involved
+ 
+As HSM plays a very critical role in storing sensistive data, HSM are typically certified against internationally recognized standard such as Common Criteria and FIPS 140
+
+### Important Points for Exams
+* Cloud HSM is Single Tenanted (Single Physical Device only for you)
+* It must be used within a VPC
+* We can integrate Cloud HSM with RedShift & RDS for Oracle
+* For fault tolerance, we will need to build cluster of 2 Cloud HSM
+* AWS uses Safenet Luna SA HSM appliance for Cloud HSM
+* They are FIPS validated 
+* It generally has 2 partitions, one for AWS to monitor and second is cryptographic partition which you have access to and has stored keys
