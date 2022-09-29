@@ -1,0 +1,4 @@
+AWS SQS is a fast reliable, scalable, and fully managed message queuing service
+
+
+AWS SQS makes it simple and quiet cost effective to decouple the components of a specific application
