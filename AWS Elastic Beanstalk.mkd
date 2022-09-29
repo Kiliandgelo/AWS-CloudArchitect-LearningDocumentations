@@ -1,0 +1,25 @@
+## Use case: Traditional Way
+Deploy a simple hello world application in an EC2 instance with ELB
+ 
+### Steps:
+* Create a EC2 instance
+* Login to EC2 instance and instals webserver and all the app dependencies
+* Configure your application
+* Create a new ELB, configure health checks, point it to right instance
+
+## Use case: Beanstalk Way
+Deploy a simple hello world application in an EC2 instance with ELB
+
+### Steps:
+* Create EB environment with right platform 
+* Point and click things we need and deploy
+
+## What beanstalk did for us ?
+Deploy a simple hello world application in an EC2 instance with ELB
+
+* It created a security group 
+* It created a EIP 
+* It launched EC2 instance 
+* Is configured the platform env in the EC2 instance 
+* It uploaded your application code in the EC2 instance 
+* It gave you a public endpoint with your application running
