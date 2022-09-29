@@ -1,0 +1,20 @@
+A global table is a collection of one or more replica tables, all owned by a single AWS account
+Each Replica stores the same set of data items
+
+## Default attributes
+ 
+Global Tables automatically creates the following attributes for every item to keep your table data in sync:
+* aws:rep:deleting
+* aws:rep:updatetime
+* aws:rep:updateregion
+ 
+ 
+You should not alter these attributes or create attributes with the same name
+
+## Important Pointers
+In a global table, a newly-written item is usually propagated to all replica tables within seconds 
+With a global table, each replica table stores the same set of data items. DynamoDB does not support partial replication of only some of the items
+
+
+Conflicts can arise if applications update the same item in different regions at about the same time
+To ensure eventual consistency, DynamoDB global tables use a “last writer wins”
