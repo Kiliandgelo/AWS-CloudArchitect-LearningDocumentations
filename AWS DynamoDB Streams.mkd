@@ -1,0 +1,16 @@
+DynamoDB Streams provides time-ordered sequence of item level changes in the DynamoDB table
+This allows us to achieve various use-cases related to continues analytics, real-time notifications and various others
+
+## Manage Stream
+View Type =
+* Key only – only the key attributes of the modified item 
+* New image – the entire item, as it appears after it was modified 
+* Old image – The entire item, as it appeared before it was modified 
+* New and old images – both the new and the old images of the item 
+ 
+ 
+Params = DynamoDB table, Batch size, Starting position, Enable trigger, Lambda function code
+ 
+### Use case
+
+      New Item -> Barktable (DynamoDB) -> DynamoDB Streams -> publishNewBark (AWS Lambda function) -> wooferTopic(SNS topic) -> Subject: A new Bark from ‘John Doe’ , Woofer user ‘John Doe’ barked the following at “2022-09-18:11:09:45” “This is a bark from woofer social network”
