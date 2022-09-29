@@ -1,0 +1,19 @@
+## Interface Level Flow Logs
+* We now know that Security Groups is associated with an interface
+* AWS allows interface level flow logs to check on what traffic is Accepted or Rejected by the Security Group
+
+## Flow Logs Format
+* Version = The VPC Flow Logs Version
+* Account-id = AWS Account ID
+* Interface-id = The network interface id
+* Srcadd = The source address
+* Destaddr = Destination Address
+* Src port = Source port
+* Dest port = Destination port
+* Protocol = The protocol number
+* Packets = Number of packets transferred
+* Bytes = Number of bytes transferred
+* Start = Start time in unix seconds
+* End = End time in unix seconds
+* Action = ACCEPT or REJECT
+* Log status = Logging status of flow log
