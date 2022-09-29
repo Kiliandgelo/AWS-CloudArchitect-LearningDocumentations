@@ -1,0 +1,20 @@
+Every bucket and its objects have an ACL associated with them
+
+When a request is received, AWS S3 will check against the attached ACL to either allow or block access to that specific object
+
+When we create a bucket or an object, AWS S3 by default will grant the resource owner full control over the resource
+
+         aws s3api get-object-acl –bucket bob-demo-crossover –key demo.txt –profile accountA 
+         aws s3api get-object-acl –bucket bob-demo-crossover –key cross.txt –profile accountB 
+
+AWS S3 supports set of pre-defined grants, known as Canned ACLs
+Each canned ACL has predefined set of permission associated with them
+These Canned ACL can be specified in the request using x-amz-acl header
+
+### ACL Name:
+* Private – Owner get FULL CONTROL. NO one else will have access rights
+* Public-read – Owner has FULL Control. Others will have public read permissions
+* Bucket-owner-read – Owner of the object has FULL CONTROL. Bucket owner will get read permissions
+* Bucket-owner-full-control – Both the object owner and the bucket owner get FULL CONTROL over the object
+
+      aws s3 cp canned.txt s3://bob-demo-crossover/ –acl bucket-owner-full-control – profile accountB
