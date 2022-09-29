@@ -1,0 +1,26 @@
+Amazon Cognito provides authentication, authorization, and user management service for your web and mobile apps
+
+## Let's understand this with an use case
+Andrew is a mobile developer in a start-up organization. They have begun with mobile wallet system, and there are specific requirements as follows:
+* Users should be able to sign-in with social network platforms like FB, Twitter , G+
+* There should be a post sign-up process (one-time password) for verification
+* Account recovery feature should be present
+* Guest access must be allowed for users to see the app
+ 
+At a high level, there are 2 major features under AWS Cognito
+1. User Pools
+2. Identity Pools
+ 
+Cognito user pool takes care of the entire authentication, authorization process
+ 
+Identity pool provides the functionality of federation for users in user pools
+
+### Identity Pool
+Cognito Identity pools also referred as AWS Cognito Federated Identities allows developers to authorize the users of the application to use various AWS services
+ 
+### Use Case:
+* We have a quiz based mobile application. At the end of quiz, user’s results should be stored in the DynamoDB table
+* If we hard-code the access/secret keys, chances of reverse engineering are high
+ 
+## User Pool Vs Identity Pool
+The Cognito Identity pool then takes these identities and federates them and then can give secure access to the AWS services regardless of where the user come from
