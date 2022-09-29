@@ -1,0 +1,12 @@
+## Eventual Consistency Reads
+
+When we write data in DynamoDB, it might not reflect the resulting data of a recently completed write operations 
+Consistency across all the storage locations is reached within a second 
+
+## Strong Consistency Reads
+
+When we request a strong consistent reads, DynamoDB returns a response with most up-to-date data
+We can specify strong consistency reads result by specifying an optional parameter in the request that we make
+ 
+          
+          aws dynamodb get-item –table-name users –key file://file.json/ –consistent-read
