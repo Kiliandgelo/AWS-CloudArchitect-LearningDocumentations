@@ -1,0 +1,6 @@
+## Overview of Data LifeCycle Manager
+AWS Data LifeCycle (DLM) for EBS Snapshots provides a simple, automated way to back up data stored on Amazon EBS volumes
+
+You can define backup and retention schedules for EBS snapshots by creating lifecycle policies based on tags
+
+We no longer have to rely on custom scripts to create and manage your backups
