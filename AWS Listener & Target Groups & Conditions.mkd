@@ -1,0 +1,27 @@
+## Listener & Target Groups
+Listener is basically a process in LB which checks fro the connection requests
+
+
+Listeners works based on 2 aspects
+* Protocol
+* Ports
+ 
+### Example: 
+HTTP Protocol and Port 80 
+
+
+OR
+
+
+HTTP protocol and port 8080
+ 
+## Conditions
+There are 2 types of conditions which can be set
+* Path-Based Conditions
+* Host-Header based condition
+
+
+Path based conditions allows to forward traffic to a appropriate target group based on the path mentioned within the request URI
+
+
+Host based condition allows to forward traffic to appropriate target group based on the host header received from the client’s request
