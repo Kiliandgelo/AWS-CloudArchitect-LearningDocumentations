@@ -1,0 +1,17 @@
+## Global Secondary Index
+With GSI, you can query data based on any attribute within a table
+ 
+ 
+Partition and Sort Keys can be different from the table
+
+## Local Secondary Index
+A local secondary index maintains an alternate sort key for a given partition key value
+
+## Important Pointers
+When you create a global secondary index on a provisioned mode table, you must specify read and write capacity units for the expected workload on that index 
+ 
+ 
+The provisioned throughput settings of a global secondary index are separate from those of its base table
+ 
+ 
+A query operation on a global secondary index consumes read capacity units from the index, not the base table
