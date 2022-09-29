@@ -1,0 +1,21 @@
+### Getting the basics right
+AWS Athena is service that allows us to analyze various log files from S3 using standard SQL
+
+### Let's understand it with an example:
+We have CloudTrail logs in AWS S3 and you want to see who has logged in, in the past 3 days
+ 
+* Create EC2 instances
+* Deploy monitoring stack like Splunk, ELK or others
+* Add the data source from S3 to import CloudTrail logs
+* Being Analyzing
+
+### Real World Use-Case
+An organization received a huge spike in traffic due to which the systems went down
+
+We were entitled to investigate if it was genuine traffic or an attack
+
+We used Athena to query VPC Flow Logs for certain information:
+* Number of Accept and Reject Logs one hour before the spike
+* Number of Accept and Reject Logs one hour after the spike
+* Most number of IP address with the reject logs
+* Which ENI received highest spike?
