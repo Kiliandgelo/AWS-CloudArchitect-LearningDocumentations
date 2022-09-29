@@ -1,0 +1,8 @@
+DynamoDB Autoscaling allows us to dynamically scale up and scale down the throughput 
+Basically, there are 2 ways to define the throughput (read/write capacity units)
+* On-Demand
+* Provisioned
+
+With On-Demand approach, there is no upper limit
+If application receives huge surge, DynamoDB will scale and serve
+However, you will also have to pay for however high it had scaled
