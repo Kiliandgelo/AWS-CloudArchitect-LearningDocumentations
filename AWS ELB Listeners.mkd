@@ -1,0 +1,26 @@
+## Listerners
+When we configure an ELB, we must configure one or more listeners 
+ 
+The listener is configured with 2 parts:
+* Protocol + Port for front end connection 
+* Protocol + Port for back end connection 
+
+## Listerners Types - HTTP & HTTPS
+
+| <b><u>Use case</u></b> | <b><u>FrontEndPRotocol</u></b> | <b><u>FrontEndOption</u></b> | <b><u>BackEndProtocol</u></b> | <b><u>BackEndOption</u></b> | <b><u>Pointers</u></b> |
+| :---         | :---         | :---         | :---         | :---         | :---         |
+| :small_orange_diamond: [Basic HTTP Load Balancer] | HTTP | NA | HTTP | NA |  X-Forwarded for header supported |
+| :small_orange_diamond: [Websites using ELB to offload SSL Decryption] | HTTPS | SSL Negotiation | HTTP |  NA  | SSL deployed in ELB |
+| :small_orange_diamond: [Websites needing end to end encryption] | HTTPS | SSL Negotiation | HTTPS  | Back-end authentication  |  SSL deployed in ELB and Backend |
+
+
+## Listeners Types - TCP / SSL
+
+| <b><u>Use case</u></b> | <b><u>FrontEndPRotocol</u></b> | <b><u>FrontEndOption</u></b> | <b><u>BackEndProtocol</u></b> | <b><u>BackEndOption</u></b> | <b><u>Pointers</u></b> |
+| :---         | :---         | :---         | :---         | :---         | :---         |
+| :small_orange_diamond: [Basic TCP Load Balancer] | TCP | NA | TCP | NA |  Supports proxy protocol header |
+| :small_orange_diamond: [Application which wants ELB to offload SSL] | SSL | SSL Negotiation | TCP |  NA  | SSL certification needs to be deployed on ELB |
+| :small_orange_diamond: [Websites needing end to end encryption] | SSL | SSL Negotiation | SSL  | Back-end authentication  |  Supports SSL end to end |
+
+
+ 
