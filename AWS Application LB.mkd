@@ -1,0 +1,14 @@
+Application LB are the next generation LB by AWS
+They support the HTTP and HTTPS protocol
+
+## New Features
+* Path and Host Based Routing 
+* Register IP as targets 
+* SNI support 
+* LB to multiple ports on same instance 
+* Many more….
+
+The request are routed based on the URI path
+
+    example.com/ -> server01
+    example.com/ -> server02
