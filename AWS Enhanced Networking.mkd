@@ -1,0 +1,43 @@
+## NIC Cards
+A network interface card is a hardware component that allows computer to connect to a network
+
+
+It generally used to be and add-on, but due to the necessity and low cost, it is generally comes build-in with the motherboards
+ 
+ 
+We generally connect to it via the RJ-45 connector
+ 
+ 
+Every network interface card has a specific bandwidth
+
+
+The networking bandwidth in-turn gets affected when virtualization layer comes into picture
+
+## Enhanced Networking
+Enhanced Networking uses single root I/O virtualization technique to provide high performance networking capabilities on supported instance types
+ 
+ 
+Intel 82599 virtual interface supports speeds up to 10 Gbps
+
+## Elastic Network Adapter
+ENA is a new PCI network device designed specifically for EC2 instances
+
+
+
+ENA supports network speeds up to 25 Gbps for supported instance types
+
+
+
+Device interface supports up to 400 Gbps of networking 
+ 
+### Supported Instance Types 
+Depending on the instance type, enhanced networking can be enabled using one of the following mechanisms: 
+* Intel 82599 virtual interface = C3, C4, I2, R3, M4 uses this interface for enhanced networking
+* Elastic Networking Adapter = C5, F1, I3, P2, P3, R4, X1, m4.16xlarge uses this interface
+ 
+ 
+        ethtool -i eth0
+        driver = ixgbevf
+ 
+ 
+        aws ec2 describe-instance-attribute –instance-id-i-089746548974354 –attribute sriovNetSupport
