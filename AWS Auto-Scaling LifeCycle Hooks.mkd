@@ -1,0 +1,10 @@
+Auto-Scaling LifeCycle hooks allows us to have control over instance launch and termination state within auto-scaling group
+
+### Sample Use case:
+* You have EC2 instance which is scheduled to be terminated
+* You want to backup all it’s logs to S3 and run some de-registration scripts
+* Terminate instance once 2nd steps is completed
+
+      Step1: Instance Awaiting Termination
+      Step2: Confirmation from Automation
+      Step3: Go ahead
