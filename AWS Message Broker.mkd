@@ -1,0 +1,26 @@
+## Resume to Text Converter
+Application XYZ is meant for extracting the values from a resume and showing it in a textual format
+
+
+There are 2 components of this application, doc gatherer and doc converter. Each component belongs in a separate server to distribute the load
+
+## Challenges
+Due to popularity of the application and huge traffic spike, company B labs has decided to scale out horizontally and have added 2 converters
+
+
+## Introduction
+ 
+One of the main function of message broker is to take message from a Publisher and forward that to a consumer
+
+
+Broker stores the messages internally inside the queues
+ 
+## Important features of Message Broker
+Guarantee of the Delivery
+Orderly Delivery
+
+## Thighly Couples System
+Components of system architecture which are both linked to each other and are hard dependent on each other
+
+## Loosely Coupled System
+Components of system architecture that can process the information without being directly connected
