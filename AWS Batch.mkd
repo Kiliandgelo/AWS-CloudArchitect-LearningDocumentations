@@ -1,0 +1,6 @@
+### Getting Started
+A batch job is a collection, or list, of commands that are processed in sequence often without requiring user input or intervention
+
+Generally batch jobs accumulate during working hours, and are then executed during the evening or another time the computer is idle
+
+Batch jobs wait in a job queue for processing when the system has the available resources
