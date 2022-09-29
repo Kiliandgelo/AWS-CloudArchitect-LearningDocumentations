@@ -1,0 +1,57 @@
+## Types of Instances
+There are 4 ways to pay for an EC2 instance:
+* On-demand instance
+* Reserved instance
+* Sport instances
+* Dedicated hosts
+
+## On demand Instance
+With On-demand instances, we pay for compute capacity per hour or per second depending on the instances which is being run
+ 
+ 
+No upfront payments are needed and we can increase or decrease the capacity whenever it is needed
+ 
+### Challenges with On-demand
+Monday: 500 customers using 16GB RAM on-demand servers individually
+
+
+Wednesday: 10 customers using 16GB RAM on-demand servers individually
+ 
+ 
+A “Cloud Service Provider” will not have a clear picture on how many servers should the provision.
+Too high -> resources might unused and too low -> money loss
+
+## Reserved Instance
+Reserved Instances provide us with significant discount (up to 70%) compared to on-demand instance pricing
+
+Reserved Instance are assigned to a specific availability zones and provides capacity reservation for AWS EC2 instances
+ 
+### Examples:
+You know you will always be running 20 servers of m4.2xlarge type, then buy reserved instances for them
+ 
+
+| <b><u>Pricing Option</u></b> | <b><u>Hourly Cost</u></b> | <b><u>Total 3 Year cost</u></b> |
+| :---         | :---         | :---         |
+| :small_orange_diamond: [On-demand Instance] | $0.4  | $0.4×26280 = 10.500$ | 
+| :small_orange_diamond: [3 Year all up-front -Reserved] |  $0.17   | $0.4×26280 = 10.500$ | 
+| :small_orange_diamond: [Savings] | | -65% | 
+
+ 
+## Spot Instance
+Spot Instances allows us to bind on spare Amazon EC2 computing capacity for up to 90% of the on-demand cost
+Such instances are recommended for applications which can have flexible start and end times
+ 
+### Example:
+You know you will always be running 20 servers of m4.large type, then buy reserved instances for them
+
+## Dedicated Host
+A dedicated host is a physical EC2 server dedicated for your use 
+It can be purchased on-demand as well as reserved instance
+
+## Exam Preparation
+Your CFO is concerned due to increase cost of AWS.
+You being solutions architect has been assigned to decrease the monthly cost. 
+It is found that 80% of your overall cost are part of EC2 instances which are launched. How will you reduce the cost ?
+* Switch to Reserved Instances
+* Switch to Spot Instances
+* Make your instance size smaller to reduce cost
