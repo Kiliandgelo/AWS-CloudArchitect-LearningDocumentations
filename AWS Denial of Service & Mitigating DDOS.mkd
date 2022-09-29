@@ -1,0 +1,38 @@
+## Getting Started 
+* Be ready to scale as traffic surges
+* Minimize the attack surfaced area 
+* Know what is normal and abnormal
+* Create a Plan for attacks
+* Be ready to Scale
+* Your Infrastructure should be designed to scale when the traffic increases
+* It not only helps in Business but also during DDOS Attacks
+ 
+### Example:
+Whenever CPU Load is more than 70% in Application servers, automatically add one more Application server to meet the needs. ELB, AutoScaling
+* Minimize the attack surfaced area
+* Decouple your infrastructure 
+ 
+### Example:
+Application and Database should not be in the same server. SQS, Elastic BeanStalk
+* Know what is normal and abnormal
+* Key metrics needs to be defined to understand the behaviour
+ 
+### Example:
+
+Website reaching huge traffic in middle of night at 3 AM. Cloudwatch , SNS
+* Create a Plan for Attacks
+ 
+### Example:
+* Check whether the Source IP Address are same
+* Check from which country the increased traffic is coming from
+* Nature of the attack (SYN Flood, Application Level)
+* Can it be blocked with NACK or Security Group level
+It is recommended to have AWS Support. At-least the Business Support
+ 
+### AWS Services: 
+* Amazon CloudFront
+* Amazon Route53
+* AutoScaling
+* AWS WAF
+* Elastic Load Balancing
+* VPC & Security Groups
