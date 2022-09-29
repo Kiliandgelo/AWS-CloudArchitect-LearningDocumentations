@@ -1,0 +1,37 @@
+Many applications requires access to shared file storage
+
+
+These shared files are generally stored in NAS
+ 
+There are certain challenges for filesystems
+* HA
+* Secure
+* Scalable
+
+
+## Overview of EFS
+Amazon EFS provides a simple, scalable , EFS for linux based workloads for use with AWS Cloud Services and on-premises resources.
+ 
+ 
+It is built to scale on demand to petabytes without disrupting applications, growing and shrinking automatically as you add and remove files
+ 
+ 
+It is designed to provide massively parallel shared access to thousands of Amazon EC2 instances
+ 
+### Understanding EFS Architecture 
+To access file system from instance inside the VPC, we need to create mount target in the VPC
+
+## Params
+* EFS -> Create File system
+* Params
+* VPC, Create mount targets (AZ, subnet, ip address, SG)
+
+Optional
+* Choose performance mode – General purpose or Max I/O
+* Choose throughput mode – Bursting or Provisioned 
+* Enable encryption – Enable encryption of data at rest
+
+
+
+        yum -y install nfs-utils
+        mount -t nfs -o nfsvers=4.1, rsize=1048576, wsize=1048576, hard,time o=600, retrans=2, noresvport fs-e29ac903.efs.us-east-1.amazonaws.com:/  ~/efs-mount-point
