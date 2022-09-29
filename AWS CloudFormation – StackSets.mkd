@@ -1,0 +1,13 @@
+CloudFormation StackSets basically allows us to deploy stacks across multiple AWS account/AWS regions from single location
+
+### Simple use-Case:
+* AWS config is recommended to be enabled in all regions 
+* Before we had to maintain stack across each region 
+* This can now be solved easily using Stacks Sets 
+
+2 IAM Roles required:
+* 1 for the administrator Account of Stack-Sets
+* 1 for the Destination AWS Accounts
+
+      Role name for Admin Account:             AWSCloudFormationStackSetAdministrationRole
+      Role name for Destination Account:     AWSCloudFormationStackSetExecutionRole
