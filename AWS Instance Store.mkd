@@ -1,0 +1,20 @@
+AWS Instance Store provides a temporary block storage volumes for use with EC2 
+
+
+This Storage is located on the disks that are physically attached to the host computer
+
+
+Size of instance store varies depending on your instance type 
+
+
+### Important points for Instance Store
+* Data in instance store is lost in following situation
+
+The underlying disk drive fails 
+
+
+The instance stops
+ 
+The instance terminates
+* Instance store are included in the cost of EC2 instance, so they are quite cost effective 
+* If planning to use Instance Store, make sure you backup your data to central Storage places like S3 
