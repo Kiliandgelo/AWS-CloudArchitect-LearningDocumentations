@@ -1,0 +1,34 @@
+Business Intelligence comprises of data, technology, analytics and human intelligence to provide insights that results in more successfully business outcome
+ 
+### Use Case – Understanding users visiting website
+* I want to see number of pageviews on my course
+* Find out sessions based on country of origin
+* Find out sessions based on the device the user is visiting from
+* From where the traffic is coming from (direct,google,bing,email,quora,etc)
+* Session Duration of the user
+* Age and gender of the users who are visiting
+ 
+### In-Short
+Business Intelligence is an act of transforming raw data into useful information for the purpose of business analytics
+ 
+### Overview of working
+* BI Systems based on data warehouse extracts information from various organizational sources
+* The Data is then transformed, cleaned and loaded into data warehouse
+* Data is then used for business insights
+
+## Key Point
+One of the major points of data warehouse is that data from various sources is integrated in one platform so it becomes easier for analytics to visualize the data
+
+Reservation
+
+Relation Database (OLTP)
+* Contains the latest set of Data
+* Useful in running the business
+* Generally used for read and write operation
+* Number of records typically accessed are limited, like tens of twenties
+
+Data Warehouse (OLAP)
+* Contains the historical data
+* Useful in analyzing the business
+* Generally used for reading operations 
+* Nb of records accessed can be millions 
