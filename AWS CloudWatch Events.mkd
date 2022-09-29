@@ -1,0 +1,4 @@
+CloudWatch Events enables us to respond to changes in our AWS environment in real time
+
+### Example Use case:
+If EC2 instance gets terminated, we want to de-register the instance from all centralized server like monitoring server, AV server, IP server and others
