@@ -1,0 +1,11 @@
+ELB Sandwich architecture is design topology where there are multiple load balancers and in between are the scalable server design pattern
+
+## Stateful vs Stateless
+There are 2 main types of Firewall
+* Stateful Firewall 
+* Stateless Firewall
+
+Stateful firewall maintains the connection state and knows which packets to allow OutBound even when outbound is restricted
+
+
+Stateless firewall does not maintain the connection state and for them each packet traversing inbound or outbound is a new separate packet
