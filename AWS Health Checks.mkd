@@ -1,0 +1,9 @@
+Route53 has a great feature called as Health Checks
+
+Health Checks is responsible for monitoring health of the endpoint
+
+
+      echo > /var/log/nginx/access.log
+      tail -f /var/log/nginx/access.log
+
+Params = Name, What to Monitor (Endpoint, Status of other health checks, State of CloudWatchAlarm), Advanced configuration, Request interval, failure threshold, health checker regions…
