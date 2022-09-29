@@ -1,0 +1,72 @@
+AWS KMS is a managed service which allows to create, manage, and control the ENCRYPTION keys and uses the HSMs to protect the security of the keys
+
+
+It does not have any upfront cost and is pay as you go model
+ 
+## Encryption Concepts
+
+### PlainText & CipherText
+* PT refers to data in un-encrypted form
+* CT refers to data after its encrypted
+ 
+### Algorithm & Keys
+* An encryption algorithm is step by step approach that tells on how the PT will be converted to the CipherText
+* KMS Supports only Symmetric Key Algorithm and Uses AES-GCM….
+ 
+### How it works:
+* We create a CMK
+* We definite the Administrative user & Key User
+* The key user can reference to the KMS Key-ID and encrypt and decrypt data
+ 
+#### STEP1 Create KMS Key
+Alias helps us in referencing the keys if we have multiple KMS keys
+ 
+#### STEP2 Create Key Administrators
+We definite Key administrators who have full permission on the key 
+ 
+#### STEP3 Create Usage Permission
+We definite Key Usage Permissions on who will have access to use this key for Encryption and Decryption
+ 
+ 
+        aws configure
+        aws kms list-keys
+ 
+ 
+ 
+        aws kms encrypt –key-id fjdfkljflkjfjff-2235u5jkglsg-4tjrjt –plaintext”This is bob”
+        aws kms encrypt –key-id fjdfkljflkjfjff-2235u5jkglsg-4tjrjt –plaintext”This is bob” –query CiphertextBlob –output text
+        aws kms encrypt –key-id fjdfkljflkjfjff-2235u5jkglsg-4tjrjt –plaintext”This is bob” –query CiphertextBlob –output text | base64 -d > encrypteddemo.txt
+ 
+ 
+        aws kms decrypt –ciphertext-blob fileb://encrypteddemo.txt
+        aws kms decrypt –ciphertext-blob fileb://encrypteddemo.txt –query Plaintext
+        aws kms decrypt –ciphertext-blob fileb://encrypteddemo.txt –query Plaintext –output text
+        aws kms decrypt –ciphertext-blob fileb://encrypteddemo.txt –query Plaintext –output text | base64 -d
+ 
+ 
+ 
+https://docs.aws.amazon.com/di.latest.reference/kms.decrypt.html
+
+
+## KMS Architecture
+We can encrypt of maximum 4 KB of data with CMK
+
+
+Since data travels over network, there can be latency issue
+
+
+AWS suggested the Customer Master Key + Data Key based approach
+
+
+### Envelope Encryption
+* We generate 1 CMK
+* We then generate the Data Key. AWS returns PT & CT version of it
+* We use the PlainText data key to encrypt the files in server
+* We then store CipherText Data Key along with encrypted file
+
+### Decryption Steps
+* Use the decrypt operation to decrypt the encrypted data key into a plaintext copy of the data key
+* Use the plaintext data key to decrypt data locally
+
+
+        aws kms generate-data-key –key-id 545646465d4dg-4564dg-4564 –key-spec AES_256
