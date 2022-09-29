@@ -1,0 +1,4 @@
+AWS License Manager is a service which allows us to manage license from wide variety of software vendors across AWS and on-premise
+
+
+We can enforce policies for licenses based on various factors like CPU, sockets that will control the number of EC2 instance which can be launched
