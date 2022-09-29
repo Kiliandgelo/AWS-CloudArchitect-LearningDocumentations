@@ -1,0 +1,13 @@
+AWS currently offers 3 major types of Load Balancer
+* Classic LB
+* Network LB
+* Application LB
+
+
+Classic Load Balancers were the old generations and are recommended if you still have instances in EC2 classic. If not, it is recommended to move to Application/Network load balancer
+
+
+### Comparaison List
+
+
+https://aws.amazon.com/elasticloadbalancing/details
