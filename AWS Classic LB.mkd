@@ -1,0 +1,14 @@
+These are older generation of LB which can be used for instances both under the VPC and the EC2 Classic network
+ 
+Provides basic set of features for HTTP, HTTPS, TCP and SSL protocols
+ 
+The newer updates and configurations no longer come to classic LB
+
+## Limitations of Classic LB
+
+* Does not support native HTTP/2 protocol
+* IP address as targets are not supported
+* Path based routing is not supported (images should go to server 1 & /php to server 02)
+* Server Name Indication (SNI) is not supported
+* LB to multiple ports on same instance
+* Many many more…
