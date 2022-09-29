@@ -1,0 +1,12 @@
+Migration is not always related to servers
+
+
+Organizations might still continue to use on-premise and might want to migrate data from old magnetic tapes
+
+
+AWS Services that helps in migrations:
+* AWS Snowball
+* Server Migration Service
+* Database Migration Service
+* Application Discovery Service
+* AWS Snowmobile
