@@ -1,0 +1,29 @@
+By default, EC2 and VPC uses IPv4 addressing protocol
+
+
+Thus, when we create a VPC, we MUST assign a IPv4 CIDR block
+
+
+The IPv4 block must be between /16 to /28
+
+
+## Let's do Subnet
+* When we specify /16, we can have maximum of 65.536 IP addresses
+* When we specify /28, we can have maximum of 16 IP addresses
+
+## Reservation
+The first 4 IP address and the last IP address in each subnet is not available for us to use and cannot be assigned to an instance
+
+### Let’s take an example:
+For subnet block of 10.0.0.0/24, following 5 IP addresses are reserved:
+
+* 10.0.0.0 – Network Address
+* 10.0.0.1 – Reserved by AWS for VPC Router
+* 10.0.0.2 – Reserved for AWS DNS
+* 10.0.0.3 – Reserved by AWS for future use
+* 10.0.0.255 – Network Broadcast. Since broadcast is not supported , this address reserved
+
+### Important Pointers
+* Understand minimum and maximum netmask (/16 and /28)
+* Know that 5 IP Address in each subnet is reserved 
+* IP address of subnet cannot overlap each other
