@@ -1,0 +1,19 @@
+Infrastructure is something that keeps on changing
+ 
+### Use Cases:
+The infrastructure cost has spiked suddenly. The CFO wants to see on what exactly has been changed since past 3 weeks
+
+You are DevOps at XYZ organization. Last Night everything was working fine. However suddenly users report that they are not able to access the website
+
+## AWS Config part 2
+Infrastructure = Security
+* Just infrastructure Monitoring is not enough
+* We need to monitor Security aspect as well
+
+Example Use case:
+* All S3 buckets should have Versioning enabled
+* ROOT MFA should be enabled 
+* Security Group should not have 0.0.0.0/0 on Port 22
+* CloudTrail must be enabled
+* No unusedEIP should be present
+* Based on the use case, AWS Config can show Compliance status
