@@ -1,0 +1,32 @@
+## Getting Started
+Link aggregation enables you to group Ethernet interfaces to form a single link layer interface, also known as a link aggregation group (LAG) or bundle
+ 
+ 
+There are various advantages which includes increasing network throughput beyond what a single connection cloud sustain, and also to provide redundancy in-case one of the link fails
+
+## DX and LAG
+In DX perspective, LAG uses Link-Aggregation Control Protocol (LACP) to aggregate multiple 1 Gbps or 10 Gbps connection at single direct connect location, allowing customers to treat them as single managed connection 
+ 
+ 
+Once we create LAG, we can associate existing connection with the LAG
+ 
+## Important Pointer for DX and LAG
+* All the connection in LAG must use the same bandwith
+* Bandwith of 1Gbps and 10 Gbps are supported
+* You can have maximum of 4 connections in a LAG
+* All connection in LAG must terminate at same DX location and on the same AWS device
+ 
+All the LAG’s that we create must have an attribute which determines minimum number of connection in LAG that must be operational for the LAG itself to be operational
+ 
+ 
+### Let’s understand this with an example:
+Total Connection for our LAG = 4
+
+
+Minimum Number of Connection = 2
+ 
+ 
+If 2 connection would fail, the overall status would be UP
+
+
+If 3 connection fails, the overall status will be Down (even if single connection is still there)
