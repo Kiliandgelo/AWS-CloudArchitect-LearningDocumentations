@@ -1,0 +1,7 @@
+ECS is a container orchestration service that supports Docker containers and allows you to easily run and scale containerized applications on AWS
+
+
+With ECS, we even have option to run containers without provisioning any servers with AWS Fargate
+
+* TaskDefinition
+* Services
