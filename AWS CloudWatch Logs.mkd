@@ -1,0 +1,13 @@
+### Centralized Log solutions
+* Server can contain lot of log files, from system logs to the applications logs
+* During debugging, it is important to have log files at hand 
+* This means in default case, you need to give access to server to individual who wants to debug
+
+### Pushing Linux system logs to CloudWatch
+
+Create Policy:
+
+Add PushingLinuxSystemCloudwatchPolicy01
+      
+      yum install -y awslogs
+      service awslogs status
