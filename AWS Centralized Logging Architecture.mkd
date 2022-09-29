@@ -1,0 +1,14 @@
+### Getting Started 
+* Define Log retention requirements and lifecycle policies early on 
+* Incorporate tolls and features to automate the lifecycle policies 
+* Automate the installation and configuration of log shipping agent 
+* Make sure the solution supports hybrid environment to support the needs 
+
+We can make use of AWS Managed service to build centralized logging solutions 
+
+* AWS ElasticSearch Service 
+* AWS CloudWatch Logs
+* Kinesis Firehose
+* AWS S3
+
+Ways to configure centralized logging for each AWS Service differs
