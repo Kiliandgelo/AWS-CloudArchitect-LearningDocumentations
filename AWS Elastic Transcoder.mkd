@@ -1,0 +1,10 @@
+## Introduction
+AWS Elastic Transcoder is a media transcoding platform on the cloud
+
+
+It allows us to convert the media files from their source format to different destination fromats
+
+## Transcoder Terminology
+1. We create a pipeline were put the details related to the input and output S3 bucket…
+2. We create a job where we define the need to be converted video formats
+3. We execute the job that does the processing
