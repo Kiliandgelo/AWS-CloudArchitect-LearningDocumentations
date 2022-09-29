@@ -1,0 +1,14 @@
+A NoSQL also referred as non-relational or non SQL databases provides means of storage and retrieval of data which is modeled by means other than tabular representation used in relational databases
+
+
+NoSQL have gained huge popularity because they are simpler to use, flexible and can achieve performance that are very difficult with traditional relational databases
+
+
+### There are lot of advantages of NoSQL database over standard relational databases:
+* Schema Free
+* Horizontal Scaling 
+* Easy Replication
+* Can manage huge amount of data 
+
+### Formats:
+Document Database, Graph Stores, Key/Value stores, Wide-column stores
