@@ -1,0 +1,30 @@
+## What is Big Data ? 
+Big Data is aspect which is beyond to generic storage capacity and generic processing power
+ 
+ 
+How do we get such huge data ? 
+ 
+Sensors, Social Networks, Online shopping websites
+
+
+Nowadays even kids uses mobile and are on social networks
+
+## How it works ?
+Data is broken down into smaller portions and each portion is handled by individual set of nodes and results are then aggregated
+
+## Introduction
+* Elastic Map Reduce is a hosted version of Apache Hadoop clustering software
+* Primary component of EMR is cluster. Cluster is collection of EC2 instances
+* 3 Components: Master Node, Core node and Task node
+
+## EMR Components
+Master nodes is responsible for coordination and distribution of data and tasks among other nodes. It also keeps tracks of status and checks overall health of the cluster
+ 
+ 
+Core nodes contains both “Data Nodes” & “Task Tracker daemon”, thus it stores data based on HDFS and can also run tasks
+ 
+ 
+Task nodes only run “TaskTracker” daemon and performs tasks
+ 
+## Sample EMR task
+To calculate number of repetitive word in a specific text document 
