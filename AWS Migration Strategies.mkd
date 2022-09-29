@@ -1,0 +1,37 @@
+## 1- Migration Strategy = Re-Host
+* Referred to as a “lift and shift”
+* Move  application without any changes
+
+
+Use case = MySQL to EC2 MySQL
+
+## 2- Migration Strategy = Re-Platform
+* Referred to as “lift, tinker and shift”
+* Make a few cloud optimizations to achieve a tangible benefit
+
+
+Use case = Move on-premise MySQL to RDS
+
+## 3- Migration Strategy = Re-Factor / Re-Architect
+* Re-imagine how the application is architected  and developed using cloud-native features
+
+
+Use case = Migrating to serverless
+ 
+## 4- Migration Strategy = Re-Purchase
+* Move from perpetual licenses to a software-as-a-service model
+
+
+Use-Case = Nessus to AWS Inspector
+ 
+## 5- Migration Strategy = Retire
+* Remove applications which are no longer needed
+
+
+Use case = On-premise FTP Servr
+ 
+## 6- Migration Strategy = Retain
+* Keep applications that are critical for the business but that require major refactoring before they can be migrated
+
+
+Use case = Old good servers still running
