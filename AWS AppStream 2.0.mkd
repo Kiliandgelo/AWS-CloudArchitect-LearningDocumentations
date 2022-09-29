@@ -1,0 +1,7 @@
+## AWS AppStream 2.0
+
+### Getting Started
+AppStream 2.0 allows us to centrally manage our desktop application and securely deliver them to any computer
+
+### Sample Use case:
+Software vendors can use AppStream 2.0 to deliver trials, demos, and training for their applications with no downloads or installations
