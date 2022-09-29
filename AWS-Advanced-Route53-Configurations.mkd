@@ -1,0 +1,16 @@
+Managed DNS Provides
+====================
+
+Generally a managed DNS Server supports basic functionality like:
+* Domain Registration
+* GUI for putting DNS records 
+* Mapping & Resolving various DNS Records
+* WHOIS Management
+
+Route53 does a lot more
+* Support of Public and Private Hosted Zones
+* Latency Based Routing
+* Geo DNS
+* Health Checks & Monitoring
+* DNS Fail over
+* Weighted Round Robin Functionality
