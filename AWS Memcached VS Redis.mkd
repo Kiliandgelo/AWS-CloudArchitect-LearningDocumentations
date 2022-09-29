@@ -1,0 +1,45 @@
+## Memcached
+
+| <b><u>Techs</u></b> | <b><u>Value</u></b> |
+| :---         | :---         |
+| :small_orange_diamond: [Simple cache Offload to database load and lower latency] | Available | 
+| :small_orange_diamond: [Support for Advanced Data Types such as hash and list] | Not Present | 
+| :small_orange_diamond: [Multi-Threaded] | Supported | 
+| :small_orange_diamond: [Ability to sort data for use cases of learderboards and rankings] | Not supported | 
+| :small_orange_diamond: [Pub/Sub Capabilities] | Not supported  | 
+| :small_orange_diamond: [HA & Failover (Nulti-AZ)] | Cannot do | 
+| :small_orange_diamond: [Persistence] | Nope | 
+| :small_orange_diamond: [Max key/value size] | 1 MB | 
+| :small_orange_diamond: [Backup & Restore Capabilities] | No | 
+| :small_orange_diamond: [Ability to scale horizontally] | Yes | 
+
+
+
+## Redis
+
+| <b><u>Techs</u></b> | <b><u>Value</u></b> |
+| :---         | :---         |
+| :small_orange_diamond: [Simple cache Offload to database load and lower latency] | Available | 
+| :small_orange_diamond: [Support for Advanced Data Types such as hash and list] | Present | 
+| :small_orange_diamond: [Multi-Threaded] | Supported | 
+| :small_orange_diamond: [Ability to sort data for use cases of learderboards and rankings] | Supported | 
+| :small_orange_diamond: [Pub/Sub Capabilities] | Supported | 
+| :small_orange_diamond: [HA & Failover (Nulti-AZ)] | Can do | 
+| :small_orange_diamond: [Persistence] | Yes | 
+| :small_orange_diamond: [Max key/value size] | 512MB | 
+| :small_orange_diamond: [Backup & Restore Capabilities] | Yes | 
+| :small_orange_diamond: [Ability to scale horizontally] | No |
+
+ 
+## Important Pointers for Exam
+### Memcached 
+* We want the simplest model possible
+* We need ability to scale out, adding or removing nodes 
+* We want to shard the data across multiple nodes
+ 
+### Redis
+* Use when data persistence 
+* We need to sort or rank-in-memory data-sets 
+* We want to replicate data from primary to one or more read-replicas for availability 
+* You need automatic failover (Multi-AZ) 
+* Backup & Restore Capabilities
