@@ -1,0 +1,41 @@
+There can be various disaster recovery design that we can implement, this directly depends on how quickly we want to recover from a disaster, in short RTO and RPO
+ 
+Broadly classified into 4 types:
+* Backup & Restore
+* Pilot light
+* Warm Standby
+* Multi-Site
+
+## Backup & Restore
+* Based on simple/cost effective method which requires us to constantly take backup of our data and store it to service like S3 and restore when disaster strikes
+ 
+* For on-premise server with huge amount of data typically in tens of terabytes, then can use technology like direct connect or import/export to backup their data to AWS
+
+## Pilot Light
+Minimal version of server in stopped state or AMI present
+Example:
+A web server, app server and DB server in 2 AZ.
+Only DB server are mirroring and others not running
+
+## Warm Standby
+Server runs with minimal sizes
+When disaster happens, the server are scaled up for production
+
+### Example:
+Same case as up but Webserver and App Server running with small instance
+ 
+## Multi-Site
+Complete 1 to 1 mirror of your production environment
+
+## AWS Services for DR
+We can use plethora of AWS Services as part of the disaster recovery which includes:
+* AWS S3
+* AWS Glacier
+* Import/Export
+* Elastic Block Store (EBS)
+* AWS Storage Gateway
+* Direct Connect
+* RDS
+* VM Import/Export
+* AWS ElasticBeanStalk
+* Route 53
