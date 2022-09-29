@@ -1,0 +1,9 @@
+## Overview of AWS Application Discovery Service
+AWS Application  Discovery Service helps enterprise customers plan migration projects by gathering information about their on-premises datacenters
+ 
+For enterprises which has hundreds to thousands of servers on-premise, getting to know network dependency, right instance types for them can be
+
+## Important Pointers
+It supports both agentless discovery and agent-based discovery
+* Agentless service needs installation of the discovery connector in VmWare vCenter
+* Agent-based service requires agent to be installed in OS
