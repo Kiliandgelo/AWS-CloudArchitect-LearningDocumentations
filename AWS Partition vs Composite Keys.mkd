@@ -1,0 +1,37 @@
+## Importance of Partition Key
+* Items in Dynamo DB are distributed across partitions
+* DynamoDB uses partition key’s value as in input to an internal hash function
+* Output of hash function determine the partition in which item will be stored
+
+## Types of Primary Key
+
+DynamoDB supports 2 types of primary key
+ 
+* Partition Key
+          
+          This is also referred as Hash Key 
+          The partition key is composed of a single attribute 
+ 
+* Partition Key + Sort Key
+
+          This is also referred as composite keys or hash key range 
+          This type of key contains 2 attributes 
+ 
+## Projection Expression
+ 
+Whenever we do a operation on table like query based, we get resulting items with all the attributes in the output
+
+
+Sometimes, we might want to only see a specific attributes of the items, instead of all of them
+
+
+Projection Expression allows us to achieve the above use-case
+
+```json
+aws dynamodb query \
+          –table-name UserOrdersTable \
+          –key-condition-expression “Username = :username” \
+          — expression-attribute-values'{
+          “:username”: {“S”:”daffyduck”}
+}’        –projection-expression ‘Amount’
+```
