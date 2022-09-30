@@ -1,0 +1,5 @@
+AWS Personal Health Dashboard displays issues that are impacting your resources or potentially impacting services that you use for your AWS
+It can be scheduled activities related to infrastructure powering your resources
+
+### EventLog 
+CloudWatch -> Rules -> Event Source
