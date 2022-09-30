@@ -1,0 +1,36 @@
+## Overview of new S3 Storage Classes
+AWS S3 has come up with new kind of storage class offering
+* Standard
+* Intelligent- Tiering
+* Standard-IA
+* One Zone-IA
+* Glacier
+* Glacier Deep Archive
+* Reduced Redundancy
+ 
+## Overview of S3 Intelligent Tiering
+The S3 Intelligent Tiering is primarily designed to optimize cost by automatically moving data to most cost-effective tier
+
+## General Purpose - Standard S3 & Infrequent Access - Standard-IA
+* 1TB of data stored in Standard S3 = 22.88$
+* 1TB of data stored in Standard-IA = 12.50$
+ 
+## Organization stores terabytes of data in S3
+It will be great if a solution automatically moves infrequent data to Standard-IA
+ 
+ 
+The S3 Intelligent Tiering works by storing data in one of the 2 access tiers:
+* Frequent Access Tier (Costly)
+* Infrequent Access Tier (Much cheaper)
+ 
+Amazon S3 monitors access patterns of the objects in S3 Intelligent-Tiering and moves the ones that have not been accessed for 30 consecutive days to the infrequent access tier
+
+
+If an object in the infrequent access tier is accessed, it is automatically moved back to the frequent access tier
+
+
+This type of storage class is preferable for long-lived data with access patterns which are unknown or unpredictable 
+
+
+S3 Intelligent-Tiering like other storage classes, is configured at the object level
+* 1 TB of data stored with Standard-Intelligent = 23$
