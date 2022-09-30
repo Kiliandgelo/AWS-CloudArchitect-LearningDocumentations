@@ -1,0 +1,10 @@
+* Many organizations are migrating from their on-premise environments to EC2
+* VMWare was one of the most used solutions for virtualization and private cloud
+ 
+ 
+        Migrate VM to EC2
+        Choose the appropriate AWS Region & Subnets
+        Migration Completed 
+
+## Important Pointer
+AWS Management Portal vCenter allows customer to manage the AWS resources from their VMWare vCenter dashboard itself
