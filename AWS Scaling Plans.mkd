@@ -1,0 +1,26 @@
+## Four Types
+There are four major types of auto scaling plans which we can choose from:
+* Maintain Current Instance levels
+* Manual Scaling
+* Scheduled Scaling
+* Dynamic Scaling
+ 
+## Type 1 - Maintain Current Instance Levels
+We can specify in ASG to maintain a specified amount of instance running at all time
+* We manually specify the minimum , maximum and ASG will manage the lifecycle of creating or terminating instance to maintain the capacity defined
+
+## Type 2 - Manual Scaling
+This is considered as the most basic way of scaling
+* We manually specify the minimum, maximum and ASG will manage the lifecycle of creating or terminating instance to maintain the capacity defined
+ 
+## Type 3 - Scheduled Scaling
+* Certain times, we might know exactly when we will need to increase or decrease the number of instances, maybe because of predictable schedule
+* Example: End of Month promotion campaign
+* In scheduled scaling, scaling actions are performed automatically at user defined data & time
+
+## Type 4 - Dynamic Scaling
+Dynamic Scaling controls auto scaling process depending on policy defined by the user
+
+
+### Example: 
+If CPU >= 70% , add 2 instances
