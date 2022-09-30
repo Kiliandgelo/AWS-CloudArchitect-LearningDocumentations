@@ -1,0 +1,19 @@
+## Overview of X-Ray
+AWS X-Ray allows us to debug our applications with functionality of request tracing so we can find the root cause and performance issues
+
+## X-Ray Integration
+AWS X-Ray provides integration with various AWS services like:
+* AWS EC2
+* Lambda
+* Elastic Load Balancing
+* API Gateway
+* Elastic Beanstalk
+
+## X-Ray Supported Platform
+AWS X-Ray provides support for following platforms:
+* Java
+* Go
+* .NET
+* Ruby
+* Python
+* NodeJS
