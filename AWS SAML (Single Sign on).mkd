@@ -1,0 +1,30 @@
+## Introduction to SAML
+* SAML stands for Security Assertion Markup Language
+* It is an secure XML based communications mechanism for communicating identities across organizations
+* SAML eliminates the need to maintain multiple authentication credentials such as passwords in multiple locations
+
+## Challenges with classic way
+* Administrator does not have direct visibility with the underlying database of the underlying database of the SAAS provider
+* If there are multiple SAAS provider, it is difficult to keep track of which user has access to which SAAS applications
+* When user left organization, we had to be removed from 7 different applications which includes AD, IPA, GIT, Confluence, HR Apps, Servers, VPN and some more.
+
+## Different Views
+Administrator’s Views:
+* Have to login to different providers to manage and control the permissions of individual user across organization
+* User forgetting username and passwords, MFA
+ 
+ 
+User’s View
+* I have to remember passwords of all the applications in the organization
+* It might be possible that even userID across apps are different, so have to remember that as well
+ 
+ 
+SAAS Provider’s View
+* Have to maintain the user and pass database of customers
+* This is a big security liability
+
+## Important Pointers
+* The flow gets initiated when user opens the IDP URL and enters the username and password
+* IdP will validate the credentials and associated permissions and the user receives SAML assertion from the Idp as part of response 
+* User does a POST of that SAML assertion to the SAAS Sign in page and SP will validate those assertion 
+* On validation, SP will construct relevant temporary credentials, and constructs sign in URL for the console and sends to the user 
