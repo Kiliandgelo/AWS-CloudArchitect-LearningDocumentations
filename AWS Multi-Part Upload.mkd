@@ -1,0 +1,3 @@
+## Understanding Multi-Part
+* Multi-part upload is a way in which we upload a entire file in form of small individual chunks to the storage device
+* While uploading data via multi-part, we need to specify the part number and it’s position in the uploaded object. This will help AWS reconstruct data
