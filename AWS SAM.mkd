@@ -1,0 +1,11 @@
+## Overview of SAM (Serverless Application Model)
+We can make use of SAM to define serverless application in simple and clear syntax
+
+
+### How things works ?
+There are 2 important steps during the SAM process:
+* Create a SAM template (JSON/YAML) that define Lambda, API and others
+* Test, Upload and Deploy application using SAM CLI
+
+### Info:
+During deployment, SAM automatically translates application specs into CloudFormation Syntax
