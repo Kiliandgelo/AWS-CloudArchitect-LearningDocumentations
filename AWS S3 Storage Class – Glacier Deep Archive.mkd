@@ -1,0 +1,13 @@
+## Glacier Deep Archive
+S3 Glacier Deep Archive is Amazon S3’s lowest-cost storage class and supports long-term retention and digital preservation for data that may be accessed once or twice in a year
+
+
+All data stored in S3 Glacier Deep Archive can be restored within 12 hours
+
+
+On the contrary, Glacier is ideal for archives where data is regularly retrieved and some of the data may be needed in minutes
+
+
+Pricing Comparison:
+* 1TB of data stored in Glacier: 14$
+* 1TB of data stored in Glacier Deep Archive: 10.99$
