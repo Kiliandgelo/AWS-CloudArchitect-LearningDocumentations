@@ -1,0 +1,13 @@
+## Challenge
+When consumer receives a message from the queue, the message still remains in the queue and is not deleted
+
+## Solution
+ 
+When consumer receives a message from the queue, the message still remains in the queue and is not deleted
+
+
+However it remains in hidden state for specific interval and can be deleted by the consumer once it has completed processing
+ 
+### Scaling to Traffic Patterns
+* Scalability is the ability of a system to change in size depending on the needs
+* Infrastructure should scale to support changing in traffic patterns in traffic patterns
