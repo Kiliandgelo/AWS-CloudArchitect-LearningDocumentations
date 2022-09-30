@@ -1,0 +1,33 @@
+## Standard Reserved Instance
+* Standard RI provides most significant discount (up to 75%) of on-demand and are more suited for steady-state usage needs
+
+## Convertible RI
+* These provide discount (up to 54%) of on-demand and provides flexibility to change attribute of reserved instance
+
+## Scheduled RI
+* Suitable for recurring schedule and provides ability to launch within time window
+ 
+## RI Types
+With convertible RI, we can:
+* Convert to new instance family eg R3 to M4 to C4 to T2
+* Convert to new operating system eg Windows to Linux
+* Convert to new instance price [eg if AWS reduces the public rate for our instance]
+* Convert to new instance size [eg from m4.large to m4.2xlarge]
+* Convert tenancy [eg dedicated instance to default]
+* Convert to different payment option [no upfront to partial upfront]
+
+## Capacity Reservation
+We have head that Reserved Instance provide capacity reservation, but that will only apply to zonal RI and not regional RI
+
+## Scenario
+### Scenario 1:
+
+Customer has following instances running:
+* 2 x m4.large instance running in us-east-1a and us-east-1b region
+* 2 x t2.large instance running across us-east-1b and us-east-1c region
+
+Customer has following RI:
+* 1 x m4.large, default tenancy, us-east-1b region (zonal RI)
+* 2 x t2.large, default tenancy, us-east-1 regional RI
+
+Additional pay: 1x m4.large instance will be charged at the on-demand rate
