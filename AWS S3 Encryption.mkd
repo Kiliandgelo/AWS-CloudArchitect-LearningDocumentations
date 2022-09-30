@@ -1,0 +1,7 @@
+S3 also needs encryption
+
+
+There are 3 ways in which we can Encrypt data in S3:
+1. Server-Side Encryption with Amazon S3-Managed Keys (SSE-S3)
+2. Server-Side Encryption with AWS KMS-Managed Keys (SSE-KMS)
+3. Server-SIde Encryption with Customer-Provided Keys (SSE-C)
