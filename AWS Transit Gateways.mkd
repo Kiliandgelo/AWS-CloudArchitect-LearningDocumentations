@@ -1,0 +1,20 @@
+## Overview of Transit Gateways
+A transit gateway is a network transit hub that you can use to interconnect your virtual private clouds (VPC) and on-premises networks
+
+
+## Concepts
+
+### Attachment
+* We can attach a VPC or VPN connection to a transit gatway
+
+#### Transit Gateway Route table
+* A route table includes dynamic and static routes that decide the next hop based on the destination IP address of the packet
+* Attachment can be associated with a single route table
+
+### Association
+* Each attachment is associated with exactly one route table
+
+### Route Propagation
+* A VPC or VPN connection can dynamically propagate routes to a transit gateway route table
+* With a VPC, you must create static routes to send traffic to the transit gateway
+* With a VPN connection, routes are propagated from the transit gateway, router using BGP
