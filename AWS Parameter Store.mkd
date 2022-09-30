@@ -1,0 +1,2 @@
+## Getting the basics right
+AWS Systems Manager Store provides centralized store to manage the configuration data, whether it is a plain-text data like database strings or even secrets such as passwords
