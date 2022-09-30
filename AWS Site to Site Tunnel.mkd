@@ -1,0 +1,12 @@
+A Site to Site (S2S) VPN allows 2 networking domains to communicate securely between each other over an untrusted network like Internet 
+ 
+ 
+The 2 sites can be AWS and on-premises datacenter or even 2 different VPC’s
+
+
+## Availability Challenges in S2S VPN
+If you have a single tunnel endpoint and if one of the side goes down, then the entire tunnel breaks
+
+## Importance of VGW
+* A Virtual Private Gateway (VGW) has build-in high-availability for VPN connection
+* AWS automatically creates 2 HA endpoints, each in a different AZ
