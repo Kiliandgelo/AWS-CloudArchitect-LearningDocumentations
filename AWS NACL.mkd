@@ -1,0 +1,25 @@
+Network ACL are stateless in nature
+
+
+They operate at the subnet level instead of instance level like Security Groups
+
+
+All subnets in VPC must be associated with NACL
+
+
+By default, Network ACL contains full allow in INBOUND and OUTBOUND
+
+
+
+### Use Case
+Company XYZ is getting lot of attacks from a random IP 128.190.12.32
+The company has more than 500 servers and Security team decided to block that IP in firewall for all the servers
+
+
+
+How to go ahead and achieve that goal ?
+
+
+
+Edit inbound rules
+Rules are priority by the numbers / ALLOW DENY
