@@ -1,0 +1,38 @@
+## Getting Started
+OpsWorks has 5 events which occur during the event lifecycle
+ 
+ 
+These events are:
+1. Set up
+2. Configure
+3. Deploy
+4. Undeploy
+5. Shutdown
+
+
+When an even occurs, it runs set of chef recipes assigned to that event
+
+
+## 1- Setup event
+Event occurs when the started instance has finished booting up
+Used for initial installation of software packages
+
+### Example:
+Installing PHP and Apache through layer recipes
+
+## 2- Configure (Event occurs on al the stack's instances when)
+* Events in configure are executed whenever instance enters or leaves online state
+* You associate or disassociate EIP of the instance
+* You attach or detach an ELB from the layer
+ 
+## 3- Deploy
+* Deploy event allows us to manually define when we want to deploy a new version of app
+
+## 4- UnDeploy
+* This event occurs when we delete the app or run the undeploy command to remove the app from the set of application servers
+
+## 5- Shutdown
+The event in this stage are executed when we inform OpsWorks to shut the instance down before the EC2 instances are terminated
+
+
+The default shutdown timeout if 120 seconds
