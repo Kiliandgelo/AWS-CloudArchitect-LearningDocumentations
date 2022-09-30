@@ -1,0 +1,13 @@
+Nat Gateway supports burst of up to 10 Gbps of bandwidth
+
+
+Thus all the instances within the private subnet needs to have traffic less than that of 10Gbps. If more than, network will be the bottleneck
+
+
+Thus when we need more bandwidth than the recommended design is to split the instance across multiple subnets and attach different NAT gateway to each of those subnets
+
+
+Normal NAT Gateway based Architecture
+
+
+Multiple NAT Gateway Approach
