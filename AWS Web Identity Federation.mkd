@@ -1,0 +1,17 @@
+## Let's understand with user-case
+You are designing a mobile application that allows users to play a quiz and depending on it, the scores are stored in the DynamoDB table and also in S3. The application needs to be distributed via play stores and thousands of people will download it 
+ 
+ 
+Q. How will application store data to DynamoDB table and to S3?
+ 
+ 
+Q. Do you want to distribute Access & Secret Key along with app to thousands of users ?
+ 
+ 
+Q. If the access/secret keys get compromised, how will you update it with new keys to ALL ?
+
+## Working with temporary keys
+* Federation is directly integrated with STS were temporary credentials are generated 
+* Till now we have been using private identity providers like JumpCloudForFederation 
+* AWS has a feature of “Web Identity Federation” which allows users to sign-in through well-know public identity providers like Login with Facebook, Amazon, Google or any other OpenID Connect to generate temporary credentials 
+* Once user authenticate against these IDP, they will receive “authentication token” which will be used to gain temporary credentials via STS service 
