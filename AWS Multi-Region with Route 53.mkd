@@ -1,0 +1,5 @@
+Route53 is one of the great service that will help us achieve the active-passive based fail over which the multi-site based disaster recovery model is about
+
+
+
+Check if the status in health check is healthy or unhealthy
