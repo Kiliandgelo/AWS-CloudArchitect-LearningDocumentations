@@ -1,0 +1,32 @@
+## Overview of SWF
+The Amazon Simple Workflow Service (Amazon SWF) makes it easy to build applications that coordinate work across distributed components
+
+## Overview of Decider
+* Defines execution order of the processes
+* Flow of input/output between multiple processes
+* Conditionals and Concurrency
+* One decider per workflow
+
+## Overview of Activities
+Activities are were the actual processing takes place
+
+
+Maybe expensive to the system resources
+
+```java
+Function firstToUpper(input: String){
+                      return.input[0].toUpperCase();
+}
+```
+
+## SQS vs SWF
+AWS SWF offers a task oriented approach
+
+
+AWS SQS offers a message oriented approach
+
+
+AWS SWF ensures that the task is assigned only one and is never duplicated
+
+
+With AWS SQS, we need to handle duplicate messages
