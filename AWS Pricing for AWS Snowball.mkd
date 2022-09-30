@@ -1,0 +1,21 @@
+### Service Fee Per Job: 
+* Snowball 50TB = $200 
+* Snowball 80TB = $250 , For asia Pacific (Singapore) = $320
+ 
+### Extra Day Charge:
+* First 10 days of onsite usage are free and each extra onsite day is $15 
+* Asia Pacific (Singapore) is $20 per extra onsite day
+ 
+ 
+Data Transfer IN to Amazon S3 is $0.00/GB (free)
+
+
+Data Transfer OUT of Amazon S3 is priced by region
+
+
+## Important Pointers
+* With a Snowball, you can transfer hundreds of terabytes or petabytes of data between your on-premises datacenters and Amazon Simple Storage Service (Amazon S3)
+* In the US regions, Snowballs come in 2 sizes: 50TB and 80TB. All other regions have 80TB Snowballs only
+* Encryption is enforced, protecting your data at rest and in physical transit
+* You don’t have to buy or maintain your own hardware devices
+* If you want to transfer less than 10 terabytes of data between your on-premises datacenters and Amazon S3 Snowball might not be your most economical choice.
