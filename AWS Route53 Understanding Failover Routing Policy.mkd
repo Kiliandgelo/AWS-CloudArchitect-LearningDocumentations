@@ -1,0 +1,44 @@
+Routing policy = Fail over, Simple, Weighted routing, Geolocation, MultiValue answer, Latency based routing
+
+## Weighted Routing Policy
+Weighted Routing allows us to specify the proportion in which traffic should be routed to the underlying servers
+ 
+ 
+If we want to send small portion of traffic to a new website theme, you can specify the weight of 1 and 99. The resource with 1 gets 1% of the traffic and other gets 99% of traffic
+ 
+ 
+To stop sending traffic to resource, you can specify weight of 0
+
+## Geolocation Routing
+Geolocation Routing allows us to choose resources based on the geographic location of the users
+
+
+For example, you might want all queries from Asia to be routed to an ELB load balancer in the Singapore region
+ 
+ 
+### Important Caution
+Geolocation Routing works by mapping database to IP address
+
+
+The results are not always accurate as some ISP might not have any geolocation data associated with them, and some ISP might move the IP block to different country without notifications
+
+
+For such cases, Route53 allows us to have a default resource block associated with the routing policy
+ 
+## MultiValue Answer Routing
+It allows us to return multiple values (such as IP address) in response to a DNS query 
+
+
+It also allows us to check the health of the resource so that Route53 responds with details of only healthy resources
+
+
+Route53 can respond to up to DNS query with up to 8 healthy records
+ 
+## Latency Based Routing
+If your application is hosted in multiple AWS regions, we can improve the performance for the users by serving their request from AWS region that provides lowest latency
+ 
+ 
+Latency between the server might change over time due to changes in backend network connectivity and routing aspects
+
+
+A request that is routed to Singapore today might be routed to India tomorrow
