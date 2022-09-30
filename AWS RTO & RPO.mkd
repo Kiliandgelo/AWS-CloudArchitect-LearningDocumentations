@@ -1,0 +1,24 @@
+High Availability Architecture is driven by your requirements
+
+
+An highly available, multi-Az, fault tolerant infrastructure is certainly possible, however there is cost associated with it
+
+
+Recovery Time Objective (RTO) is the amount of time it takes for you to recover your infrastructure and business operations after disaster has struck. How long to recover ? Restoration
+
+
+### Example:
+If RTO is 3 hours , then one needs to invest quiet good amount of money to make sure DR region is always ready in-case main region goes down due to disaster
+
+
+Recovery Point Objective (RPO) is concerned with data and maximum tolerance period to which data can be list. How far back ? Lost Data 
+
+
+It helps in determining how well we should be designing the infrastructure 
+
+
+### Example:
+If RPO is 5 hours for databasem then we should be taking backup of database every 5 hours.
+
+
+RTO is more broader scope and covers whole business and systems involved while RPO is more directly related to interval of backup to take to avoid data loss
