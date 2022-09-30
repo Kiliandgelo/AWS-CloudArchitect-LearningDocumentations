@@ -1,0 +1,7 @@
+Earlier for EC2 instances to be able to access public resources like S3, the traffic needed to be pass via Internet Gateway or even via NAT
+
+
+Simplifying this approach, AWS introduced a feature called as “VPC Endpoints” are secure and highly reliable connection which provides secure connection to services like S3
+
+
+Thus EC2 instance within private VPC can now connect to such services without any need of NAT gateway or even Private Gateways
