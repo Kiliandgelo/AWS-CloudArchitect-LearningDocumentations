@@ -1,0 +1,24 @@
+AWS Snowball is a data transport solution that accelerates moving terabytes to petabytes of data into and out of AWS using storage devices designed to be secure for physical transport
+ 
+ 
+Snowball helps to eliminate challenges that can be encountered with large-scale data transfers including high network costs long transfer times, and security concerns
+
+
+## Supported jobs
+AWS Snowball supports 2 major options while creating a new job
+* Import to S3
+* Export from S3
+ 
+Steps to create a new job
+1. Creating the import job from AWS Console
+2. Connect the Snowball
+3. Copy your data to the Snowball
+4. AWS moves the data to S3
+
+## Pricing Structure for AWS Snowball
+Pricing is based on a few categories:
+* Service Fee Charge
+* Extra Day Charge
+* Data Transfer Charge
+* Shipping Charge
+* S3 Charge (DATA Transfer OUT)
