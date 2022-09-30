@@ -1,0 +1,65 @@
+Let’s take an example
+
+
+I live in place A in Mexico and want to meet m friend living in place B in Mexico
+ 
+ 
+* Condition = is traffic less on the roads ? Are there any UBER available ?
+* Rules = If traffic is less AND uber available then
+* WebACL = Yes if rules are met , no if otherwise
+* Association = Bob
+
+## Conditions in WAF
+Conditions define basic characteristic that would analyze within a web request
+
+
+There are size conditions which are supported as of now:
+* SQL Injection attacks
+* Cross-Site scripting activities
+* Geographical location that requests originate from (GEO Match)
+* Length of specified parts of the request (Size Constraints)
+* IP Address or address ranges that requests originate from
+* Strings that appear within the requests
+
+## Rules in WAF
+We can combine multiple conditions into rules to precisely target requests
+
+
+WAF provides 2 types of rule = Regular Rule & Rate Based rule
+ 
+ 
+Let’s look into sample regular rule
+* If requests comes from 172.30.0.50
+* They include to be SQL-like code
+
+
+When rules has multiple conditions, it is treated as AND
+
+
+Rate Based rule = Regular Rule + Rate limiting feature
+* If requests comes from 172.30.0.50
+* They include to be SQL-like code
+* If requests exceeds 1000 requests in 10 minutes
+ 
+## Web ACL in WAF
+WebACL defines action taken against a rule
+ 
+ 
+Simple Regular Rule
+* If request comes from 172.30.0.50
+* They include to be SQL-like code
+
+
+What action to take now ?
+
+
+Types of actions = Allow, Block, Count
+
+## Association in WAF
+Association define to which entity WAF is associated to
+
+
+WAF cannot be associated with EC2 instances directly
+
+
+Support Association = ALB and CloudFront
