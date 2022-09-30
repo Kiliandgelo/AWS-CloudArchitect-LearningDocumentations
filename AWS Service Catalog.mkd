@@ -1,0 +1,13 @@
+AWS Service Catalog enables organizations to create and manage catalogs of IT services that are approved for use on AWS 
+
+### Sample Use-Case:
+In Enterprise development account, developers launch their servers based on varied type of sets of AMI, like Ubuntu, CentOs, Redhat
+
+
+There is no standardization
+* Create PortFolio
+* Upload new product (EC2 instance stack)
+* Constraints
+* Users, groups, roles
+* Share with others, AWS accounts….withing Organizations…
+* Tags
