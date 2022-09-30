@@ -1,0 +1,14 @@
+Using a single database for all kind of activity will slow down the process in the longer run and it can be scaled when load increases
+
+## Architecture 
+All the WRITES will be made on the MasterDB
+
+
+All the READS will be made on the READ Replica
+
+### Important Points:
+* Generally used for read intensive workloads
+* In order to deploy a read replica, one must have automatic backups turned on 
+* We can have up to 5 read replica copies for a database. For Aurora, it is 15
+* Read replicas can be promoted to be their own full fledged db
+* Read replica is available for MySQL, PostgreSQL, MariaDB and Aurora
