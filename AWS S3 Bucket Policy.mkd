@@ -1,0 +1,20 @@
+One of the limitations of IAM is that it is generally restricted to the principles like the user/group/roles withing AWS Account 
+
+
+When we speak about S3 bucket which is used by external entities, we need much more granular permissions
+
+
+S3 Bucket policies are attacked directly to the S3 buckets
+
+## Cross Account Access
+There are lots of use-cases where access to the S3 bucket need to be given to principal belonging to different AWS account
+
+### Example:
+* ORG has 2 AWS Accounts. Account A has all the S3 Buckets, Account B has all EC2 Instances.
+* EC2 instances need to periodically backup all the data to S3 bucket in Account A 
+
+
+How to achieve the use case ? 
+ 
+
+Add Code S3bucketpolicycrossaccount01
