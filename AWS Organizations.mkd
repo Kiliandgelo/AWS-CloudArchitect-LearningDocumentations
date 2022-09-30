@@ -1,0 +1,12 @@
+AWS offers centralized policy-based management as well as the feature of consolidated billing for multiple AWS accounts through the feature of AWS Organizations
+* Consolidated Billing Only
+* All features
+
+
+Invite Account
+
+
+Create Account 
+
+
+Help to take power on other AWS Accounts 
