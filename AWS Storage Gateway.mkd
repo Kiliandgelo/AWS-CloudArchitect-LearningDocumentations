@@ -1,0 +1,38 @@
+## Introduction
+AWS Storage Gateway is a hybrid storage service that allows the on-premise application to easily use the cloud storage
+ 
+ 
+Storage Gateway appliance uses standard storage protocols like NFS, iSCSI which the application connects to and stores the data
+ 
+ 
+The other end of storage gateway connects to AWS storage services like S3, Glacier and EBS Snapshots
+
+
+## Configuration
+There are 3 different configuration available:
+* Gateway Stored Volume
+* Gateway Cached Volume
+* Gateway virtual tape library
+
+## Gateway Stored Volume
+Stores primary data locally while asynchronously backing up data to AWS
+ 
+## Gateway Cached Volumes
+Data is stored primarily on AWS S3 with cache of recently read or written data stored locally in the on-premise server
+ 
+## Gateway Virtual tape library
+Vritual tapes stores in S3 with frequently accessed data stored on-premise
+ 
+## Tape based storage
+Tape backup is practice of periodically copying data from primary storage device to a tape cartridge so data can be recovered if there is any data crash or failure on primary device
+
+
+Tape solutions remains most cost effective solution till date
+ 
+## VTS and VTL
+* Tape Gateway
+* Virtual tape storage in Amazon S3 and Amazon Glacier with VTL management
+* Virtual tape storage in S3 and Glacier accessed via tape gateway
+* Data compressed in-transit and at-rest
+* Up to 1 PB total tape storage per gateway, unlimited archive capacity
+* Supports leading backup applications: Veritas, DellEmc, Veeam, arcServe…
