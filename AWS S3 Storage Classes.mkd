@@ -1,0 +1,54 @@
+S3 offers various kinds of storage classes for different use cases:
+* General purpose ->   Standard S3
+* Infrequent Access -> Standard S3 (Infrequent Access) [Standard IA]
+* RRS ->                        Reduced Redundancy Storage
+* Archive ->                   Glacier
+
+## Durability vs Availability 
+* Durability is percent (%) over 1 year period of time that the file which is stored in S3 will not be lost
+* Availability is percent (%) over 1 year period of time and the file stored in S3 will not be available
+ 
+### Example:
+For Server, Availability is one of the key metric and any minute of downtime is a loss
+
+
+However what happens if component of server itself fails and server goes down ? 
+
+## AWS S3 Standard
+Amazon S3 Standard offers high durability, availability and performance for objects stored
+* Designed for durability of 99.9999999% of objects (eleven nines)
+* Designed for 99.99% availability over a given year
+
+### Example:
+If we have 10.000 files stored in S3 (II nines durability) then you can expect to lose one file every ten millions years 
+
+## AWS S3 Standard IA
+Amazon S3 Standard – Infrequent Access is for data that is accessed less frequently but requires rapid access when needed
+* Designed for durability of 99.99999999999% of objects
+* Designed for 99.90% availability over a given year
+
+## AWS RRS
+AWS S3 Reduced Redundancy storage enable customers to reduce their costs by storing non critical, reproducible data at lower levels of redundancy than Amazon S3’s standard storage
+* Designed for durability of 99.99% of objects 
+* Designed for 99.99% availability over a given year
+
+## Comparison of Storage Classes
+
+| <b><u></u></b> | <b><u>Standard</u></b> | <b><u>Standard-Infrequent-Access</u></b> | <b><u>Reduced Redundancy Storage</u></b> |
+| :---         | :---         | :---         | :---         |
+| :small_orange_diamond: [Durability] | 99.99999999999%   | 99.999999999999%  | 99.99% |
+| :small_orange_diamond: [Availability ] | 99.99% | 99.99%  | 99.99%|
+| :small_orange_diamond: [Concurrent facility fault tolerance] |  2 |  2 | 1 |
+| :small_orange_diamond: [SSL Support] | Yes | Yes | Yes |
+| :small_orange_diamond: [First byte latency] | Milliseconds  | Milliseconds  | Milliseconds  |
+| :small_orange_diamond: [Lifecycle Management Policies] | Yes | Yes | Yes |
+
+
+## Glacier
+* AWS Glacier is meant to be for archiving and for storing long-term backups
+* May take several hours for the object to get restored
+* 99.99999999999% durability of object
+* It is much cheaper then S3 (very low cost)
+ 
+### Example Use Case:
+Backup of Application logs more 1 year older can be moved to Glacier
