@@ -1,0 +1,9 @@
+### VPN use in Corporate Network
+* In corporate environments , VPN is used to connect to instances in Private Subnet
+* VPN Server resides in the Public Subnet and you route your traffic via VPN Server to instances in Public Subnet
+
+## Implementing Software Based VPN
+
+
+            ssh-k ~/.ssh/bob_rsa openvpnas@54.784.70.121
+            passwd openvpn 
