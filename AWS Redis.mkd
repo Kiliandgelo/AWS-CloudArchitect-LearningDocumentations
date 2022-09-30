@@ -1,0 +1,46 @@
+Redis was generally built with taking over limitations in-mind for Memcached
+
+ 
+### Here are some of the advantages of Redis
+* Persistence support
+* It can be highly available. One master and different read replica
+* Supports 512MB worth of data in the value side
+* Supports almost all features of Memcached and much more as well
+ 
+
+        apt-get install build-essential
+        curl -O http://download.redis.io/redis-stable.tar.gz
+        make, make install, ./install_server.sh
+        service redis_6379 status
+        redis-cli
+        set bob redis
+        get bob
+
+## Advantage - Many Data Types
+Memcached supported simple key-value pair, however Redis has wide range of data type supports which includes simple key-value(strings), lists, set , sorted sets, hashes 
+
+
+Each of these data type supports has it’s own use case and because of it’s great support to data types, redis is generally preferred over memcached
+
+
+        HMSET boblectures name “bob redis tutorial” description “Redis seems nice” lecture 45 subscribers 5000 
+        HGETALL boblectures 
+        LPUSH bobcourses “AWS CSA Associate 2018” 
+        LPUSH bobscourses “AWS CSA Professional 2018” 
+        LPUSH bobcourses “NGINX – beginner to Adavanced” 
+        LRANGE bobcourses 0 3 
+        ZADD csp 5 secret 
+        ZADD csp 1 aws 
+        ZADD csp 3 gcp 
+        ZADD csp 2 azure 
+        ZADD csp 4 digitalocean  
+        ZRANGE csp 0 10 WITHSCORES 
+
+## Pub Sub Capabilities
+Redis pub/sub is like a messaging system where sends message to a queue, while receive those messages
+ 
+ 
+        pubsub channels
+        SUBSCRIBE secretchannel
+        PUBLISH secretchannel “This is bob video course”
+ 
