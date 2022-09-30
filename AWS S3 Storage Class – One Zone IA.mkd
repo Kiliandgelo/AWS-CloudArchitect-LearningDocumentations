@@ -1,0 +1,21 @@
+## Overview of One Zone IA
+Storage classes like Standard s3, Standard-IA stores the data in minimum 3 availability zones
+
+
+Do to this, the overall cost per of storage is increased with such architecture
+ 
+ 
+S3 One Zone-IA stores data in a single AZ and costs 20% less than S3 Standard-IA
+
+
+It’s a good choice for storing secondary backup copies of on-premises data or easily recreatable data
+
+
+Data will be lost in case of availability zone destruction
+
+
+## Pricing Compoarison
+Overview of pricing comparison between storage classes:
+* 1TB of data stored in Standard S3 = 22.88$
+* 1TB of data stored in Standard-IA = 12.50$
+* 1TB of data stored in One Zone IA = 10$
