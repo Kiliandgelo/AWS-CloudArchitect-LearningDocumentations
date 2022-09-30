@@ -1,0 +1,35 @@
+Multi-AZ Deployment provides enhanced availability and durability for DB instance making them a natural fit for production database workloads
+ 
+ 
+During Multi-AZ deployments, Amazon automatically creates a standby DB instance and synchronously replicates data from the primary DB instance in a different availability zone
+ 
+## Failover Condition
+ 
+AWS RDS detects and automatically recovers from the most common failure scenarios for Multi-AZ deployments
+* Loss of availability in primary Availability Zone
+* Loss of network connectivity to primary
+* Compute unit failure on primary
+* Storage failure on primary
+ 
+### Important Points:
+In case of any infrastructure failure, RDS performs automated fail over to the standby instance as part of the fail over strategy.
+
+
+Since endpoints remains same after fail over, we dont need to modify anything in the code 
+
+
+Multi-AZ is supported for MySQL, MariaDB, PostgreSQL, and Oracle
+
+
+Multi-AZ is based on synchronous replication while Read Replica is based on Async
+ 
+## Synchronous Vs Asynchronous Replication
+
+Synchronous Replication:
+* Write is not committed unless it is written on both the replicas
+* Higher durability
+* Higher transaction latency
+
+Asynchronous Replication:
+* Write are not in real time across master and replica
+* Replica can fall behind master, determined by replication lag
