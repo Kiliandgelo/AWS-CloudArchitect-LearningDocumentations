@@ -1,0 +1,51 @@
+## EC2 to DynamoDB communication (Before)
+Traffic from EC2 instance would go though the Internet Gateway and from there , reach the public endpoints of DynamoDB or other services 
+## EC2 to DynamoDB communication (After)
+Traffic from Ec2 instance would go though the VPC endpoint service
+ 
+### Interface VPC Endpoints
+* DynamoDB = Gateway
+* EC2 = Interface
+* EC2 messages = Interface
+* ElasticLoadBalancer = Interface
+* Kinesis-streams = Interface
+* KMS = Interface
+* S3 = Gateway
+* ServiceCatalog = Interface
+* SSM = Interface
+ 
+In Gateway endoints approach, the VPC endpoint was created outside your VPC and traffic was routed via route table.
+
+
+Thus, it was not possible to use it direcly from VPN or Direct connect
+
+
+Access policy was controlled through IAM like JSON document
+
+## Introducing Interface VPC Endpoints
+Interface VPC endpoints are next generation VPC endpoints
+* VPC endpoints are created inside your VPC
+* They have ENI and Private IP associated
+* Access control through security groups
+
+
+Eventual Consistency
+ 
+* Consistency is one of the key aspect in field of Data Storage
+* It describes when the change committed, the changes are visibly immediately to all participants
+ 
+ 
+Golden Rule is -> 
+After the transaction is committed, the changes are visibly immediately to all participants
+ 
+### Example:
+Change committed at 1 milliseconds will be visible to everyone querying on 2 millisecond
+ 
+ 
+Eventual Consistency allows some time lag between time the data is committed to the time data is visible to all participants
+
+
+AWS provides eventual Consistency for overwrite PUTS and DELETES in all region
+ 
+### Example:
+If we delete an object and make a GET request, we might still get the data back 
