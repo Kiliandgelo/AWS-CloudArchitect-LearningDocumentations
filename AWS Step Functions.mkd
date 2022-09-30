@@ -1,0 +1,8 @@
+## Overview of Step Functions
+Step Functions are generally used as an orchestration for serverless functions 
+ 
+ 
+One of the question that comes when you use serverless is, how can we turn serverless into apps ?
+ 
+ 
+Step Functions makes it easy to coordinate the components of distributed application using visual workflow
