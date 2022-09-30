@@ -1,0 +1,17 @@
+The principle of least privilege is practice of limiting access to minimal level that will allow normal functioning
+
+
+A user should only have access to the data, Hardware that they need , to be able to perform their assigned duties.
+
+
+### Use Case:
+Alice is an intern who has joined your organization as an Intern System Administrator. Since your infrastructure is hosted in AWS, you need to give access to Alice to view the AWS console. What kind of access will you give?
+
+
+Create a new user Alice with ReadOnlyAccess
+
+
+A software developer wants to access an application server to see the logs.You being a system administrator , you need to provide him access. How will you give access?
+
+
+Ask the developer on what log file he wants to access, verify if his access is justified and only allow him to have access to that specific log file and nothing else
