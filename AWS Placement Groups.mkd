@@ -1,0 +1,15 @@
+Placement Group is a logical group of instances within a single AZ
+
+
+They are recommended for applications that require low latency, high network throughput
+
+
+## Important Points to Remember
+* We fist create a placement group and then launch multiple instances inside it 
+* Placement group cannot span across multiple availability zones
+* There are only specific instances type which can be launched inside the placement group
+* We cannot move existing instance into placement group, in such case we need to create an AMI of the instance and launch new instance form that AMI inside the placement group
+* Maximum network throughput traffic between 2 instances in placement group is limited by the slower of the 2 instances
+* The name that we specify for placement group must be unique across your AWS account
+* AWS recommends instances with same type to be launched within a placement group
+* We cannot merge placement groups
