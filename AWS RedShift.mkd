@@ -1,0 +1,11 @@
+RedShift is a fully managed petabyte scale data warehouse for storing large amounts of data for business intelligence applications
+* RedShift can be a single node or a multi-node cluster
+* Depending on the instance type, the storage is determined
+* RedShift clusters are currently supported in single AZ based architecture
+ 
+## Important Pointers
+* Data in redshift can be backed up with redshift snapshots
+* Both Automatic and manual snapshot options are available
+* RedShift nodes are continuously backed up to S3 and in event of failure, data is restored and new nodes are launched
+* RedShift can restore the data from snapshot by launching new cluster by importing data from snapshot
+* RedShift snapshots can be copied from one region to another (can be both….automated)
