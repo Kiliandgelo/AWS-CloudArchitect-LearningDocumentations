@@ -1,0 +1,11 @@
+AWS Shield is a managed Distributed DDOS service that safeguards the workloads running on AWS against DDOS attacks
+
+
+2 tiers of AWS shield
+* Shield Standard 
+* Shield Advanced 
+
+AWS Shield Advanced costs 3000$ per organization and requires Business or Enterprise Support
+
+
+With AWS Shield Advanced, during an attack, if your infrastructure has scaled, AWS will return you the amount occurred during scaling in the form of credits. This i also referred to as Cost Protection.
