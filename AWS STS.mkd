@@ -1,0 +1,47 @@
+## Assume Role
+AWS STS allows to create temporary security credentials
+
+
+Temporary security credentials are short term and expire after certain duration
+
+
+Since they have limited lifetime, the key rotation is no longer explicitly needed
+
+### Use Case:
+Bob is a developer and he is testing his code on the local environment in his laptop
+
+
+Since his code requires access to AWS S3, he needs AWS access & secret key.
+
+
+Since there is no IAM role that can be used here, what is the best solution to implement
+
+Allow User to use STS to generate temporary credentials
+
+### Implementation:
+* STEP1= Create a CrossAccount Role in IAM
+* STEP2= Attach a S3ReadOnly Policy to that IAM role
+* STEP3= Allow user to Assume Role with STS
+* STEP4= Remove all other policy from user except Assumer Role
+
+
+
+        aws sys assume-role –role-arn arn:aws:iam:::83601456481:role/STSRole –role-session-name bob
+
+### Automate tempoary credentials STS
+
+Take Session Token after that command
+
+
+         aws sys assume-role –role-arn arn:aws:iam:::83601456481:role/STSRole –role-session-name bob
+
+Go to: ~/.aws/credentials
+add
+
+```yaml
+[automate]
+role_arn:     = arn:aws:iam:::4489484646:role/STSRole
+source_profile = default
+then
+aws s3 ls –profile automate
+```
