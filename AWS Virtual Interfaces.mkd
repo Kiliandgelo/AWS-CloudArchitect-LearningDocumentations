@@ -1,0 +1,23 @@
+## Overall Steps
+* Create a DX connection and it will go for approval from AWS side. Once approved you get a LOAD from AWS which you can share with AWS Direct Connect partner
+* Create virtual interface according to your requirement:
+1. Public VIF: Used to access public endpoints withing the region
+2. Private VIF: Used to access private endpoints like VPC
+* Once VIF is created, you will get an option to download “Router Configuration File” which you download and upload it to your router
+
+## Steps 1: Establish DX connection request
+* Here we specify the connection name, location and the port speed
+* After we click on create, it will go for review to AWS and if approved, we get a LOA which we can download and send it to provider who will be establishing DX connection on your behalf
+* It takes up to 3 working days for the LOA to be approved
+## Steps 2: Create Virtual Interface - Private
+* Each private VIF can be assigned to only one VGW
+* Since VGW can be associated with only one VPC
+* Since DX uses BGP, we don’t have to manually add routing, BGP advertises routes
+ 
+## Steps 3: Download Router Configuration
+
+### Important Pointers
+* By default 1Gbps and 10Gbps connections are available, we can also have sub-1GB connection from direct connect partners which includes 50mpbs, 100mbps, 200mpbs, 400mbps, 500mbps
+* Direct Connect uses public interface for accessing public resources and private interface while accessing VPC cased resources
+* Direct connect is not fault tolerant, so we need to either have secondary Direct Connect or use VPN as backup. Use BGP to automatic failover to backup connection
+* In US, direct connect will grant you access in all the US related region
