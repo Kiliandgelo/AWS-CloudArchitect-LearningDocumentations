@@ -1,0 +1,4 @@
+## Benefits that SNI brings
+* Prior to SNI, a website needed to have a dedicated IP address in order to have a SSL certificate to be installed
+* However with SNI, multiple websites can share single IP and all of these websites can have their own SSL certificate
+* Some of the legacy clients (includes Internet Explorer on Windows XP) do not support the server name indication. Thus many of the website breaks 
