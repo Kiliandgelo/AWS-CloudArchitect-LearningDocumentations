@@ -1,0 +1,41 @@
+When we create a table, we specify the capacity requirements for read and write activity
+ 
+ 
+When we specify these throughput values in advance, it helps DynamoDB reserve capacity in advance so to ensure consistent, low-latency performance.
+ 
+ 
+We specify throughput in terms of read capacity units & write capacity units 
+
+## Read Capacity Units
+One read capacity unit represents one strong consistency read per second or 2 eventual consistency read per second, for an item up to 4KB in size
+
+
+If item is larger than 4KB in size, then we need more read units
+ 
+### Example:
+We have 5 read units for our DynamoDB table
+
+
+Item size = 40KB
+ 
+Strong Consistency Reads = 4KB x 10 Read Units
+
+
+OR
+
+
+Eventual Consistency Reads = 40KB
+
+## Write Capacity Units
+
+One write capacity unit represents one write per second up to 1KB in size
+
+
+If item is larger than 1KB in size, then we need more write units
+
+
+### Example:
+We have to write 5KB per second 
+
+
+Write units required = 5 units [1KB x 5 capacity units]v
