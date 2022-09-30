@@ -1,0 +1,17 @@
+## Instance Size Flexibility
+* Reserved Instance provides us the flexibility to change instance size
+* If we have paid ALL Upfront, does that mean we can change our current t2.medium RI to t2.large without paying anything ?
+
+## Scenario
+Let’s assume we have RI for c4.8xlarge instance type 
+8xlarge = 64 normalization factor
+
+
+Thus we can launch either:
+* 1 instance of c4.8xlarge 
+* 2 instance of c4.4xlarge 
+* 4 instance of c4.2xlarge 
+* 16 instance of c4.large 
+
+
+We can also combine like, one c4.xlarge and eight c4.large instance
