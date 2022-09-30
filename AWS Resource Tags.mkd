@@ -1,0 +1,15 @@
+### Use case
+The monthly AWS bill has been quiet high. 
+
+
+CFO has approached you to design strategy to give visibility on which team’s resource is costing how much ? 
+ 
+### Solution:
+You decided to implement tagging strategy with “team: team-name” approach so that is becomes easier to get the exact results
+
+
+## Use case
+Payments Team manager has come to you requesting you to show all the resources belonging to the “team: payments” tag so that he can see what all belongs to him
+ 
+ 
+How will you achieve this use case ?
