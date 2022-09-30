@@ -1,0 +1,17 @@
+Network Load Balancer works on the four layer of the OSI model
+
+
+NLB supports TCP protocol
+ 
+NLB selects target based on flow-hash algorithm which is based on 
+* IP address
+* Destination Port
+* TCP sequence number
+ 
+
+Each individual TCP connection is routed to a single target for the lifetime of the connection
+
+## Advantages of NLB
+2 major advantages when we compare it with ALB
+* Ability to handle volatile workloads and scale to millions of requests per second
+* Supports static IP addresses. We can use Elastic IP now.
